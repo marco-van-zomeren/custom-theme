@@ -1,0 +1,21 @@
+// RESET
+@import "reset/reset";
+
+// FONTS
+@import url(https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,400;0,700;1,400);
+
+// ICONS
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// BOOTSTRAP
+@import "bootstrap/scss/custom/bootstrap";
+
+// MODULES
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css');
+@import url('https://unpkg.com/swiper/swiper-bundle.min.css');
+@import "modules/cookies";
+@import "modules/woocommerce";
+@import "modules/coblocks";
+
+// THEME
+@import "theme";

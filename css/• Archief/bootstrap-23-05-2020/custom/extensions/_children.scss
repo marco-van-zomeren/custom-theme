@@ -1,0 +1,40 @@
+$children: (
+	border-md-0,
+	border-top,
+    text-white,
+	d-inline-block,
+	d-md-inline-block,
+	float-left,
+    float-right,
+	mr-md-20,
+	p-20,
+	p-md-0,
+	text-truncate,
+);
+
+@each $child in $children {
+    .c\:#{$child} >*{
+        @extend .#{$child}
+    } 
+}
+
+$children-with-a: (
+	border-bottom,
+	border-top,
+	text-black,
+	text-md-black,
+    text-white,
+    text-md-white,
+	text-gray-500,
+	d-inline-block,
+	d-md-inline-block,
+	p-20,
+	p-md-0,
+	transition-20,
+);
+
+@each $child in $children-with-a {
+    .c\:#{$child} >* > a{
+        @extend .#{$child}
+    } 
+}

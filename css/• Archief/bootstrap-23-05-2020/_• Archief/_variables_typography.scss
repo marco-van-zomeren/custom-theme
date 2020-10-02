@@ -1,0 +1,119 @@
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: 'Muli', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            var(--font-sans-serif) !default;
+// stylelint-enable value-keyword-case
+
+// $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
+// $font-size-base effects the font size of the body text
+$font-size-root:              null !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1.618 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
+
+$h1-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                $font-size-base * 1.5 !default;
+$h3-font-size:                $font-size-base * 1.25 !default;
+$h4-font-size:                $font-size-base * 1.125 !default;
+$h5-font-size:                $font-size-base !default;
+$h6-font-size:                $font-size-base * 0.875!default;
+
+$headings-margin-bottom:      $spacer / 2 !default;
+$headings-font-family:        null !default;
+$headings-font-style:         null !default;
+$headings-font-weight:        700 !default;
+$headings-line-height:        1.5 !default;
+$headings-color:              null !default;
+
+// scss-docs-start display-headings
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+) !default;
+
+
+$display-font-weight: 300 !default;
+$display-line-height: $headings-line-height !default;
+// scss-docs-end display-headings
+
+$lead-font-size:              $font-size-base * 1.25 !default;
+$lead-font-weight:            300 !default;
+
+// Font-size
+$small-font-size:             .875em !default;
+$sub-sup-font-size:           .75em !default;
+
+// add utility font-sizes
+$font-size-sm: 0.875rem !default;
+$font-size-md: 1.25rem!default;
+$font-size-lg: 1.5rem!default;
+$font-size-xl: 2rem!default;
+// end utility font-sizes
+
+$text-muted:                  $gray-600 !default;
+
+$initialism-font-size:        $small-font-size !default;
+
+$blockquote-small-color:      $gray-600 !default;
+$blockquote-small-font-size:  $small-font-size !default;
+$blockquote-font-size:        $font-size-base * 1.25 !default;
+
+$hr-margin-y:                 $spacer !default;
+$hr-color:                    inherit !default;
+$hr-height:                   $border-width !default;
+$hr-opacity:                  .25 !default;
+
+$legend-margin-bottom:        .5rem !default;
+$legend-font-size:            1.5rem !default;
+$legend-font-weight:          null !default;
+
+$mark-padding:                .2em !default;
+
+$dt-font-weight:              $font-weight-bold !default;
+
+$nested-kbd-font-weight:      $font-weight-bold !default;
+
+$list-inline-padding:         .5rem !default;
+
+$mark-bg:                     #fcf8e3 !default;
+
+// Paragraphs
+//
+// Style p element.
+$paragraph-margin-bottom:   1rem !default;
+
+// Links
+$link-decoration:                         none !default;
+$link-hover-decoration:                   null !default;
+
+// Code
+$code-font-size:                    $small-font-size !default;
+$code-color:                        $pink !default;
+
+$kbd-padding-y:                     .2rem !default;
+$kbd-padding-x:                     .4rem !default;
+$kbd-font-size:                     $code-font-size !default;
+$kbd-color:                         $white !default;
+$kbd-bg:                            $gray-900 !default;
+
+$pre-color:                         null !default;

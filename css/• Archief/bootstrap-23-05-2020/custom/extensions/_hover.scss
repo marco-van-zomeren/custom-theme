@@ -1,0 +1,12 @@
+$hovers: (
+    bg-gray-100,
+    border-bottom,
+	text-white,
+);
+
+@each $hover in $hovers {
+    .hover\:#{$hover}:hover {
+        @extend .#{$hover}
+    } 
+}
+

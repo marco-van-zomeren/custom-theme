@@ -1,0 +1,25 @@
+:root {
+  --text-black: #{$black};
+  --text-white: #{$white};
+	
+  @each $color, $value in $grays {
+    --bs-gray-#{$color}: #{$value};
+  }
+	
+  @each $color, $value in $colors {
+    --bs-#{$color}: #{$value};
+  }
+
+  @each $color, $value in $theme-colors {
+    --bs-#{$color}: #{$value};
+  }
+	
+  --text-link: #{$link};
+
+  --bs-font-sans-serif: #{inspect($font-family-sans-serif)};
+  --bs-font-monospace: #{inspect($font-family-monospace)};
+  --bs-gradient: #{$gradient};
+	
+  // Gutter size	
+  --spacer: #{$spacer};	
+}

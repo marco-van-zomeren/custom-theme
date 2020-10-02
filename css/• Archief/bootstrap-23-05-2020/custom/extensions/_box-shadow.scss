@@ -1,0 +1,16 @@
+@include media-breakpoint-up(md) {
+	.hover\:box-shadow-border-n5,
+	.c\:hover\:box-shadow-border-n5 > a {
+	-webkit-box-shadow: inset 0 0 0 0 var(--text-black);
+	-moz-box-shadow: inset 0 0 0 0 var(--text-black);
+	box-shadow: inset 0 0 0 0 var(--text-black);
+	transition: all 0.2s
+	}
+
+	.hover\:box-shadow-border-n5:hover,
+	.c\:hover\:box-shadow-border-n5:hover > a {
+	-webkit-box-shadow: inset 0 -5px 0 0 var(--text-black);
+	-moz-box-shadow: inset 0 -5px 0 0 var(--text-black);
+	box-shadow: inset 0 -5px 0 0 var(--text-black);
+	}
+}

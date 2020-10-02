@@ -1,0 +1,82 @@
+/*!
+ * Bootstrap v5.0.0-alpha1 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
+@import "functions";
+@import "variables";
+@import "custom/variables"; // CUSTOMIZED
+@import "custom/mixins"; // CUSTOMIZED
+@import "custom/utilities"; // CUSTOMIZED
+
+// Layout & components
+@import "custom/root"; // CUSTOMIZED
+@import "reboot";
+ol, ul {
+	padding: 0; // CUSTOMIZED
+}
+@import "custom/type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+
+// Helpers
+@import "custom/helpers";
+
+// Utilities
+@import "utilities/api";
+// scss-docs-end import-stack
+
+// Custom settings
+// Extensions
+@import "custom/extensions/blocks";
+@import "custom/extensions/border";
+@import "custom/extensions/box-shadow";
+@import "custom/extensions/breadcrumbs";
+@import "custom/extensions/buttons";
+@import "custom/extensions/css-grid";
+@import "custom/extensions/children";
+@import "custom/extensions/flip-horizontal";
+@import "custom/extensions/hover";
+@import "custom/extensions/input";
+@import "custom/extensions/lists";
+@import "custom/extensions/object-fit-cover";
+@import "custom/extensions/tabs";
+@import "custom/extensions/type";
+@import "custom/extensions/woocommerce";
+
+// Custom components
+@import "custom/components/footer";
+@import "custom/components/nav";
+
+// Custom modules
+@import "custom/modules/swiper";
+
+// Custom themes
+@import "custom/themes/default";

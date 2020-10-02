@@ -1,0 +1,22 @@
+.breadcrumbs {
+	font-size: 0.8rem;
+	color: var(--color_grey_3);
+	span a {
+		color: var(--color_grey_3)!important;
+		text-decoration: none;
+		text-decoration-line: none;
+		@include media-breakpoint-up(md) {
+			&:hover {
+				color: var(--color_grey_3);
+				text-decoration: none;
+				text-decoration-line: none;
+			}
+			&:after {
+				background-color: var(--color_grey_3)!important;
+			}
+    	}
+	} 
+	i {
+		font-size: 1rem;
+	}
+}

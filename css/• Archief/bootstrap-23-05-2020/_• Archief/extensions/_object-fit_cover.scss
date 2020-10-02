@@ -1,0 +1,25 @@
+img.object-fit-cover {
+  @extend .w-auto;
+  @extend .h-auto;	
+  @extend .mh-100\%;
+  @extend .min-vw-100;
+  @extend .position-absolute;
+  @extend .z-0;
+  top: 50%;
+  left: 50%; 
+  max-width: 1000%;  
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@supports (object-fit: cover) {
+  img.object-fit-cover {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transform: none; 
+	} 
+}
+

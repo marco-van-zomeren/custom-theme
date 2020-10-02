@@ -1,0 +1,16 @@
+@function color-opacity($color, $alpha: var(--a) ) {
+  @return ( "rgba(" red($color), green($color), blue($color), $alpha) ")";
+}
+
+@each $color, $value in $background-colors-rgba {
+
+    @at-root .bg-#{$color}.rgb {
+
+      background-color:  #{color-opacity($value)};
+
+  }
+}
+
+*[class^="bg"] {
+    --a: 1;
+}

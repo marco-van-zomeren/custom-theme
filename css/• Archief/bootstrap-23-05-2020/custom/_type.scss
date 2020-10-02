@@ -1,0 +1,135 @@
+//
+// Headings
+//
+h1 {
+  @extend h1;
+  line-height: #{$line-height-md};
+  margin-bottom: 0.618rem;
+  @include media-breakpoint-down(md) {
+    font-size: #{$font-size-xl};
+    line-height: #{$line-height-sm};
+  }
+  &.font-size-lg {
+    font-size: #{$h1-font-size-large};
+    @include media-breakpoint-down(md) {
+        font-size: #{$h1-font-size-small};
+    }
+  }
+}
+
+h2 {
+  @extend h2;
+  line-height: #{$line-height-md};
+  margin-bottom: 0.125rem;
+  @include media-breakpoint-down(md) {
+      font-size: #{$h3-font-size}
+  }
+  &.font-size-sm {
+    font-size: #{$h3-font-size}
+  }
+}
+
+h3 {
+  line-height: #{$line-height-md};
+  margin-bottom: 0.125rem;
+  @include media-breakpoint-down(md) {
+      font-size: #{$h3-font-size-small}
+  }   
+  &.font-size-sm {
+    @extend h4;
+  }
+}
+
+h4 {
+  @extend h4;
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-heading)
+}
+
+// [...]
+
+.lead {
+  @include font-size($lead-font-size);
+  font-weight: $lead-font-weight;
+}
+
+// Type display classes
+@each $display, $font-size in $display-font-sizes {
+  .display-#{$display} {
+    @include font-size($font-size);
+    font-weight: $display-font-weight;
+    line-height: $display-line-height;
+  }
+}
+
+//
+// Emphasis
+//
+.small {
+  @extend small;
+}
+
+.mark {
+  @extend mark;
+}
+
+
+//
+// Article
+//
+article {
+    ul,
+    ol,
+    table {
+        margin-bottom: 1rem;
+    }
+}
+
+//
+// Lists
+//
+
+.list-unstyled {
+  @include list-unstyled();
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled();
+}
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-padding;
+  }
+}
+
+
+//
+// Misc
+//
+
+// Builds on `abbr`
+.initialism {
+  @include font-size($initialism-font-size);
+  text-transform: uppercase;
+}
+
+// Blockquotes
+.blockquote {
+  margin-bottom: $spacer;
+  @include font-size($blockquote-font-size);
+}
+
+.blockquote-footer {
+  display: block;
+  @include font-size($blockquote-small-font-size);
+  color: $blockquote-small-color;
+
+  &::before {
+    content: "\2014\00A0"; // em dash, nbsp
+  }
+}

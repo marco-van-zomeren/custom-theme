@@ -1,0 +1,26 @@
+@import "_variables_grid";
+@import "_variables_colors";
+@import "_variables_box-shadow";
+
+@import "_variables_components";
+
+// Depending on color
+@import "_variables_body";
+@import "_variables_typography";
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-caret:                true !default;
+$enable-rounded:              true !default;
+$enable-shadows:              false !default;
+$enable-gradients:            false !default;
+$enable-transitions:          true !default;
+$enable-reduced-motion:       true !default;
+$enable-grid-classes:         true !default;
+$enable-button-pointers:      true !default;
+$enable-rfs:                  true !default;
+$enable-validation-icons:     true !default;
+
+$enable-deprecation-messages: true !default;
+$enable-important-utilities:  true !default;

@@ -1,0 +1,65 @@
+/*
+Error: (0: 0, 5: 5px, 10: 10px, 20: 20px, 30: 30px, 40: 40px, 60: 60px, 80: 80px) isn't a valid CSS value.
+        on line 43 of /Volumes/documenten$/Marketing en Innovatie/1a - Online Marketing/Grafisch_ontwerp/1_Mockups/Design/source/css/utilities/_variables.scss
+
+38: $enable-validation-icons:     true !default;
+39: $enable-negative-margins:     true !default;
+40: $enable-deprecation-messages: true !default;
+41: $enable-important-utilities:  true !default;
+42: 
+43: $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+44: 
+45: // Grid columns
+46: // Set the number of columns and specify the width of the gutters.
+47: $grid-columns:                12 !default;
+48: $grid-gutter-width:           1.5rem !default;
+
+Backtrace:
+/Volumes/documenten$/Marketing en Innovatie/1a - Online Marketing/Grafisch_ontwerp/1_Mockups/Design/source/css/utilities/_variables.scss:43
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/value/map.rb:52:in `to_s'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:175:in `join'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:175:in `to_value'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:168:in `to_literal'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:159:in `_perform'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/functions.rb:617:in `perform'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/functions.rb:2333:in `if'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:155:in `block in _perform'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:108:in `block in with_function'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:108:in `with_function'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:153:in `_perform'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:482:in `visit_variable'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/engine.rb:290:in `render'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:400:in `run'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/bin/sass:34:in `load'
+/Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/bin/sass:34:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: (0: 0, 5: 5px, 10: 10px, 20: 20px, 30: 30px, 40: 40px, 60: 60px, 80: 80px) isn't a valid CSS value.\A         on line 43 of /Volumes/documenten$/Marketing en Innovatie/1a - Online Marketing/Grafisch_ontwerp/1_Mockups/Design/source/css/utilities/_variables.scss\A \A 38: $enable-validation-icons:     true !default;\A 39: $enable-negative-margins:     true !default;\A 40: $enable-deprecation-messages: true !default;\A 41: $enable-important-utilities:  true !default;\A 42: \A 43: $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;\A 44: \A 45: // Grid columns\A 46: // Set the number of columns and specify the width of the gutters.\A 47: $grid-columns:                12 !default;\A 48: $grid-gutter-width:           1.5rem !default;"; }

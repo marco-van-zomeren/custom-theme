@@ -1,0 +1,134 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+$link: #0092BC;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-caret:                false;
+$enable-rounded:              true;
+$enable-shadows:              true;
+$enable-gradients:            false;
+$enable-transitions:          true;
+$enable-reduced-motion:       true;
+$enable-grid-classes:         true;
+$enable-button-pointers:      fasle;
+$enable-rfs:                  true;
+$enable-validation-icons:     fasle;
+$enable-negative-margins:     true;
+$enable-deprecation-messages: fasle;
+$enable-important-utilities:  true;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// Spacing
+$spacer: 20px ;
+$spacers: (
+  0:  0,
+  5:  $spacer / 4,
+  10: $spacer / 2,
+  20: $spacer,
+  30: $spacer * 1.5,
+  40: $spacer * 2,
+  60: $spacer * 3,
+  80: $spacer * 4,
+);
+
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null);
+
+// Body
+$body-bg:                   $white;
+$body-color:                $gray-900;
+$body-text-align:           null;
+
+// Links
+//
+// Style anchor elements.
+$link-color:                              $link;
+$link-decoration:                         null;
+$link-hover-color:                        $link;
+$link-hover-decoration:                   null;
+
+
+// Components
+// Define common padding and border radius sizes and more.
+$border-width:                1px ;
+$border-color:                $gray-400 ;
+
+$border-radius:               5px ;
+$border-radius-md:            10px ;
+$border-radius-lg:            20px ;
+
+$rounded-pill:                50rem ;
+
+$box-shadow:                  0 .5rem 1rem rgba($black, .15) ;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) ;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175) ;
+$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) ;
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Muli", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+// stylelint-enable value-keyword-case
+
+// $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
+// $font-size-base effects the font size of the body text
+$font-size-root:              null ;
+$font-size-base:              1rem ; // Assumes the browser default, typically `16px`
+$font-size-xs:                $font-size-base * .8 ;
+$font-size-sm:                $font-size-base * .875 ;
+$font-size-md:                $font-size-base * 1.125 ;
+$font-size-lg:                $font-size-base * 1.25 ;
+$font-size-xl:                $font-size-base * 1.5 ;
+$font-size-xxl:               $font-size-base * 2 ;
+$font-size-xxxl:              $font-size-base * 3 ;
+
+$font-sizes: (
+    "xs":     $font-size-xs,
+    "sm":     $font-size-sm,
+    "md":     $font-size-md,
+    "lg":     $font-size-lg,
+    "xl":     $font-size-xl,
+    "xxl":    $font-size-xxl,
+    "xxxl":   $font-size-xxl
+) ;
+
+//$font-weight-lighter:         lighter ;
+$font-weight-light:           300 ;
+$font-weight-normal:          400 ;
+$font-weight-bold:            700 ;
+//$font-weight-bolder:          bolder ;
+
+$font-weight-base:            $font-weight-normal ;
+
+$line-height-base:            1.618 ;
+$line-height-sm:              1.25 ;
+$line-height-md:              1.5 ;
+$line-height-lg:              2 ;
+
+$h1-font-size-large:          $font-size-base * 2.25 ;
+$h1-font-size:                $font-size-base * 1.953 ;
+$h1-font-size-small:          $font-size-base * 1.625 ;
+$h2-font-size:                $font-size-base * 1.563 ;
+$h3-font-size:                $font-size-base * 1.25 ;
+$h3-font-size-small:          $font-size-base * 1.125 ;
+$h4-font-size:                $font-size-base * 1 ;
+
+//$headings-margin-bottom:      $spacer / 2 ;
+$headings-font-family:        null ;
+$headings-font-style:         null ;
+$headings-font-weight:        700 ;
+$headings-line-height:        1.2 ;
+$headings-color:              var(--headings-color) ;

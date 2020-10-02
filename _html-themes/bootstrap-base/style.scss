@@ -1,0 +1,65 @@
+@import "../../style.scss";
+ 
+$primary:               #B71C1C;
+$primary-darken-10:     #{darken( $primary, 10% )};
+$secondary:             #1A237E;
+$secondary-darken-10:   #{darken( $secondary, 10% )};
+$tertiary:              #01579B;
+$tertiary-darken-10:    #{darken( $tertiary, 10% )};
+
+$colors: (
+    "primary":              $primary,
+    "primary-darken-10":    $primary-darken-10,
+    "secondary":            $secondary,
+    "secondary-darken-10":  $secondary-darken-10,
+    "tertiary":             $tertiary,     
+    "tertiary-darken-10":   $tertiary-darken-10
+);
+
+// FONTS
+$font-base: "Montserrat", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+// APPPLY SETTINGS
+// ROOT
+:root {
+body.theme-base {
+	--font-base: var( #{$font-base} );
+    @each $color-name, $color-code in $colors {
+        --color-#{$color-name}: #{$color-code};
+      }
+	}
+}
+
+//COLORS
+body.theme-base {
+	@each $color-name, $color-code in $colors {
+		.text-#{$color-name} {
+			color: #{$color-code};
+		} 
+		.bg-#{$color-name} {
+			background-color: #{$color-code};
+		}
+	}
+	--color-btn-primary: black;
+	--color-heading: black;
+	--color-link: #0092BC;
+}
+
+// TYPE
+body {
+	font-family: #{$font-base}!important;
+}
+
+h1, h2, h3, h4 {
+	font-family: "Montserrat", "Helvetica Neue", Arial, "Noto Sans", sans-serif,!important;
+	font-weight: 500!important;
+}
+
+// NAV
+nav a[aria-current="page"] {
+	color: var(--color-link)!important;
+}
+
+
+

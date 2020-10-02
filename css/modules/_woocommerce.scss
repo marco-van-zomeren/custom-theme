@@ -1,0 +1,208 @@
+body.woocommerce {
+    background-color: var(--color-dark-blue);
+}
+
+.woocommerce a.remove:hover,
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+    background: transparent;
+}
+
+// INPUT
+.woocommerce-form__input-checkbox {
+	-webkit-appearance: checkbox!important;
+	box-shadow: none!important;
+    display: block!important;
+    height: 20px!important;
+    width: 20px!important;
+	margin-right: 5px!important;
+}
+
+.woocommerce form .show-password-input, .woocommerce-page form .show-password-input {
+	top:0!important;
+	right:0!important;
+}
+
+// SHOP PAGE
+ul.products li.product .woocommerce-loop-product__title {
+    min-height: 85px;
+}
+
+// PRODUCT PAGE
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+    float: left;
+	width: 100% !important;
+}
+
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+    color: var(--text-black)
+}
+.woocommerce div.product .button:not(.add_to_cart_button) {
+	display: none !important;
+}
+
+.woocommerce a.button.add_to_cart_button.product_type_simple {
+    margin: 15px 0px 20px;
+}
+
+.woocommerce ul.products {
+    width: 100%;
+}
+
+.woocommerce-Reviews input {
+    margin-bottom: var(--spacer);
+}
+
+// SLIDER
+.woocommerce {
+	.swiper-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+	}
+
+	.swiper-slide {
+		background-size: cover;
+		background-position: center;
+	}
+
+	.gallery-thumbs .swiper-slide {
+		height: 100%;
+		opacity: 0.4;
+	}
+
+	.gallery-thumbs .swiper-slide-thumb-active {
+		opacity: 1;
+	}
+}
+
+// CHECKOUT
+.woocommerce {
+    a.remove {
+        &:hover {
+            color: red !Important;
+            border: none;
+        }
+        line-height: 0.95;
+    }
+    ul.products li.product a img {
+        border-radius: 5px;
+    }
+    label {
+        width: auto
+    }
+    .quantity input {
+        float: none;
+    }
+    table.cart td.actions .coupon {
+        .input-text:not(.bg-white) {
+            padding: 10px;
+            width: 100%;
+            background: white;
+        }
+        button.button {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+
+#add_payment_method table.cart img,
+.woocommerce-cart table.cart img,
+.woocommerce-checkout table.cart img {
+    float: left;
+}
+
+#add_payment_method #payment ul.payment_methods,
+.woocommerce-cart #payment ul.payment_methods,
+.woocommerce-checkout #payment ul.payment_methods {
+    padding: 0;
+}
+
+.payment_methods {
+    display: none !important;
+}
+
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+    color: var(--bs-gray-900);
+    border: 3px solid var(--bs-gray-500);
+    background: none;
+    a {
+        color: var(--text-link);
+    }
+    &::before {
+        color: var(--bs-gray-900);
+    }
+}
+
+.button.wc-forward {
+    width: 100%;
+    margin-bottom: 15px!important;
+}
+
+.woocommerce ul.order_details li {
+    width: 100%;
+    margin-bottom: 1em;
+    border-right: none;
+}
+
+.woocommerce form .form-row {
+    padding: 0;
+    margin: 0 0 20px!important;
+}
+
+.woocommerce .col2-set .col-1,
+.woocommerce-page .col2-set .col-1 {
+    width: 100% !important;
+}
+
+// CATEGORY PAGE 
+.woocommerce-result-count {
+    width: 100%;
+}
+
+.woocommerce .woocommerce-ordering,
+.woocommerce-page .woocommerce-ordering {
+    float: left;
+    width: 22.05%;
+}
+
+@include media-breakpoint-down(lg) {
+    .woocommerce ul.products li.product,
+    .woocommerce-page ul.products li.product,
+    .woocommerce ul.products[class*=columns-] li.product,
+    .woocommerce-page ul.products[class*=columns-] li.product {
+        width: 100%;
+        margin: 0;
+    }
+
+    .woocommerce .woocommerce-ordering,
+    .woocommerce-page .woocommerce-ordering {
+        width: 100%;
+    }
+}
+
+// REVIEWS COOKIES-CONSENT CHECKBOX
+.comment-form-cookies-consent input{
+	display: none!important;
+}
+
+// LOGIN / REGISTER
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+	padding: 0!important;
+	border: 0!important;
+}
+
+// CART
+.cart {
+	.cart__total {
+    line-height: 31px;
+	}
+}

@@ -1,0 +1,23 @@
+:root {
+  // Custom variable values only support SassScript inside `#{}`.
+  @each $color, $value in $colors {
+    --color-#{$color}: #{$value};
+  }
+
+  @each $color, $value in $theme-colors {
+    --color-#{$color}: #{$value};
+  }
+	
+  @each $color, $value in $grays {
+    --color-#{$color}: #{$value};
+  }
+	
+  --color-link: #{$link-color};
+	
+  --spacer: #{$spacer};
+
+  // Use `inspect` for lists so that quoted items keep the quotes.
+  // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
+  --font-sans-serif: #{inspect($font-family-sans-serif)};
+  --font-monospace: #{inspect($font-family-monospace)};
+}
