@@ -19,18 +19,36 @@ function custom_customizer( $wp_customize ) {
         'settings' => 'custom_header',
         'type' => 'radio',
         'choices' => array(
-          'spotlight' => __( 'Spotlight' ),
-          'slider' => __( 'Slider' )
+          'spotlight' => __( 'Spotlight image with h1' ),
+          'slider' => __( 'Slider big - 3 large Slides' ),
+		  'slider-small' => __( 'Slider small - preheader, intro and a slider with posts from the homepage category' )
         )
       )
     )
   );
 
-  // Spotlight
-  $wp_customize->add_setting( 'spotlight_image' );
+  // Preheader
+  $wp_customize->add_setting( 'spotlight_preheader', array(
+    'default' => 'Preaheader text'
+  ) );	
+  $wp_customize->add_control( 'spotlight_preheader', array(
+    'label' => 'Preheader',
+    'section' => 'custom_header',
+    'type' => 'text',
+  ) );	
+	
+  // Spotlight title	
   $wp_customize->add_setting( 'spotlight_title', array(
     'default' => 'Hello world'
   ) );
+  $wp_customize->add_control( 'spotlight_title', array(
+    'label' => 'h1',
+    'section' => 'custom_header',
+    'type' => 'text',
+  ) );	
+	
+ // Spotlight image	
+  $wp_customize->add_setting( 'spotlight_image' );
   $wp_customize->add_control(
     new WP_Customize_Image_Control(
       $wp_customize,
@@ -42,12 +60,37 @@ function custom_customizer( $wp_customize ) {
       )
     )
   );
-  $wp_customize->add_control( 'spotlight_title', array(
-    'label' => 'Spotlight title',
+	
+  // Intro tekst
+  $wp_customize->add_setting( 'spotlight_intro', array(
+    'default' => 'Intro text'
+  ) );	
+  $wp_customize->add_control( 'spotlight_intro', array(
+    'label' => 'Intro text',
     'section' => 'custom_header',
     'type' => 'text',
-  ) );
-
+  ) );	
+	
+  // Spotlight CTA URL
+  $wp_customize->add_setting( 'spotlight_cta-url', array(
+    'default' => '/'
+  ) );	
+  $wp_customize->add_control( 'spotlight_cta-url', array(
+    'label' => 'CTA URL',
+    'section' => 'custom_header',
+    'type' => 'text',
+  ) );	
+	
+ // Spotlight CTA
+  $wp_customize->add_setting( 'spotlight_cta', array(
+    'default' => 'Call to action'
+  ) );	
+  $wp_customize->add_control( 'spotlight_cta', array(
+    'label' => 'CTA Text',
+    'section' => 'custom_header',
+    'type' => 'text',
+  ) );	
+		
   // SLIDE 1
   $wp_customize->add_setting( 'slide_1_image' );
   $wp_customize->add_setting( 'slide_1_title', array(

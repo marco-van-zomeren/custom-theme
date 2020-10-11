@@ -6,6 +6,8 @@
 <?php include("page-front_spotlight.php"); ?>
 <?php elseif( get_theme_mod( 'custom_header', 'slider' ) == 'slider' ) : ?>
 <?php include("page-front_slider.php"); ?>
+<?php elseif( get_theme_mod( 'custom_header', 'sliders-small' ) == 'slider-small' ) : ?>
+<?php include("page-front_slider-small.php"); ?>
 <?php endif ?>
 <!-- --> 
 
@@ -14,19 +16,3 @@
 <!-- -->
 
 <?php include("footer.php"); ?>
-<script>
-var swiper = new Swiper('#swiper_homepage', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    keyboard: {
-        enabled: true,
-    },
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    loop: true
-});
-</script>

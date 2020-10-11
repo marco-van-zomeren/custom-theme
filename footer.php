@@ -76,11 +76,11 @@
           </span> </p>
         <?php
         wp_nav_menu( array(
-          'theme_location' => 'footer-menu-3',
+          'theme_location' => 'footer-menu-4',
           'container' => false,
           'menu_class' => 'collapse d-md-block',
           'add_li_class' => 'py-10',
-          'menu_id' => 'footer-menu-2'
+          'menu_id' => 'footer-menu-4'
         ) )
         ?>
       </div>
