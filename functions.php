@@ -98,12 +98,18 @@ if ( function_exists('register_sidebar') ) {
     );  
     $sidebar2 = array(
 		'id'            => 'sidebar-2',
-		'description'   => __( 'This is a placeholder sidebar for the cookie notification. Don&rsquo;t place widgets here.' ),      
+		'description'   => __( 'This is for the cookie notification. Don&rsquo;t place other widgets here.' ),      
         'name'=>__( 'Cookies', 'textdomain' ),  
+    );
+	$sidebar3 = array(
+		'id'            => 'sidebar-3',
+		'description'   => __( 'This is the sidebar for the shop.' ),      
+        'name'=>__( 'Woocommerce', 'textdomain' ),  
     );
      
     register_sidebar($sidebar1);
     register_sidebar($sidebar2);
+	register_sidebar($sidebar3);
 }
 
 // BODY CLASS CATEGORIE
@@ -195,13 +201,13 @@ function mo_comment_fields_custom_html( $fields ) {
 	unset( $fields['url'] );
 	// then re-define them as needed:
 	$fields = [
-		'comment_field' => '<div class="comment-form-comment mb-20"><label for="comment">' . _x( 'Comment', 'noun', 'textdomain' ) . '</label> ' .
+		'comment_field' => '<div class="comment-form-comment float-left w-1-1 mb-20"><label for="comment">' . _x( 'Comment', 'noun', 'textdomain' ) . '</label> ' .
 			'<textarea class="js__textarea" id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></div>',
 		
-		'author' => '<div class="comment-form-author mb-20">' . '<label for="author">' . __( 'Name', 'textdomain'  ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-			'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></div',
+		'author' => '<div class="comment-form-author float-left w-1-1 mb-20">' . '<label for="author">' . __( 'Name', 'textdomain'  ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+			'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></div>',
 		
-		'email'  => '<div class="comment-form-email"><label for="email">' . __( 'E-mail', 'textdomain'  ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+		'email'  => '<div class="comment-form-email float-left w-1-1 mb-20"><label for="email">' . __( 'E-mails', 'textdomain'  ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
 			'<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></div>'
 	];
 	// done customizing, now return the fields:
@@ -258,8 +264,8 @@ function custom_override_checkout_fields( $fields ) {
  	unset( $fields['billing']['billing_address_2'] );
 	unset( $fields['billing']['billing_city'] );	
 	unset( $fields['billing']['billing_company'] );
-  	unset($fields['billing']['billing_country']);
-  	unset($fields['shipping']['shipping_country']);
+  	unset( $fields['billing']['billing_country']);
+  	unset( $fields['shipping']['shipping_country']);
 	unset( $fields['billing']['billing_postcode'] );
 	unset( $fields['billing']['billing_state'] );
 	unset( $fields['billing']['billing_phone'] );
@@ -271,25 +277,21 @@ function custom_override_billing_fields( $fields ) {
   unset( $fields['billing_address_2'] );	
   unset( $fields['billing_city'] );	
   unset( $fields['billing_company'] );
-  unset($fields['billing_country']);
+  unset( $fields['billing_country']);
   unset( $fields['billing_postcode'] );	
   return $fields;
 }
 
 function custom_override_shipping_fields( $fields ) {
-  unset($fields['shipping_country']);
+  unset( $fields['shipping_country']);
   return $fields;
 }
 
 // Hide cart when empty
-add_action( 'wp_footer', function() {
-    
+add_action( 'wp_footer', function() {    
     if ( WC()->cart->is_empty() ) {
-        
         echo '<style type="text/css">.cart__total{ display: none; }</style>';
-    
     }
-
 });
 
 require_once( get_template_directory() . '/customize.php' );

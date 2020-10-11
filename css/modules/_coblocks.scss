@@ -46,6 +46,10 @@
 		&.slick-next:before{
 			line-height: 33px!important;	
 		}
+		&:hover{
+			border: 0!important;	
+			color: inherit!important;	
+		}
 	}
 	.wp-block-coblocks-post-carousel__item {
 		.wp-block-coblocks-post-carousel__image  {
@@ -86,3 +90,4 @@
 	height: 100%
 	}
 }
+

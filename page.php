@@ -1,5 +1,5 @@
 <?php include("header.php"); ?>
-<main class="px-20 bg-white">
+<main class="bg-white">
 	<div class="container">
 		<?php
 		/* Start the Loop */

@@ -46,6 +46,11 @@ $(".js__tabs .tabs__toggle").click(function () {
     $(".tabs__more").toggleClass("show");
 });
 
+// SUB-MENU 
+$(".menu-item-has-children > a").click(function () {
+	$(this).toggleClass("active").next(".sub-menu").toggle();
+});
+
 // SHARE PAGE
 jQuery(document).ready(function () {
     jQuery('.js__share-page a.share-page__on-facebook').click(function () {
