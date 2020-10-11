@@ -1,4 +1,5 @@
-<section class="row px-md-20"> 
+<div class="container">
+<div class="row"> 
   
   <!-- SLIDER -->
   <section class="col-12 col-md-6 pr-20">
@@ -118,8 +119,8 @@ defined( 'ABSPATH' ) || exit;
       </aside>
     </div>
   </section>
-</section>
-<section class="row p-20 bg-dark-blue">
+</div>
+<div class="row p-20 bg-dark-blue">
   <?php
   global $product;
 
@@ -134,7 +135,8 @@ defined( 'ABSPATH' ) || exit;
     'orderby' => 'rand'
   ) );
   ?>
-</section>
+</div>
+</div>
 <script>
 var galleryThumbs = new Swiper('.gallery-thumbs', {
     spaceBetween: 10,

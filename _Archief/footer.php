@@ -3,7 +3,7 @@
     <div class="row"> 
       <!-- FOOTER COLUMN -->
       <div class="col-12 col-md-3">
-        <p class="font-weight-700 text-transform-uppercase d-table" data-toggle="collapse" data-target="#footer-menu-1" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
+        <p class="font-weight-700 text-transform-uppercase d-table text-black" data-toggle="collapse" data-target="#footer-menu-1" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
           <?php
           $locations = get_nav_menu_locations(); //get all menu locations
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-1' ] ); //get the menu object
@@ -15,7 +15,7 @@
         wp_nav_menu( array(
           'theme_location' => 'footer-menu-1',
           'container' => false,
-          'menu_class' => 'collapse d-md-block',
+          'menu_class' => 'collapse d-md-block c:text-black',
           'add_li_class' => 'py-10',
           'menu_id' => 'footer-menu-1'
         ) )
@@ -24,7 +24,7 @@
       <!-- --> 
       <!-- FOOTER COLUMN -->
       <div class="col-12 col-md-3">
-        <p class="font-weight-700 text-transform-uppercase d-table" data-toggle="collapse" data-target="#footer-menu-2" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
+        <p class="font-weight-700 text-transform-uppercase d-table text-black" data-toggle="collapse" data-target="#footer-menu-2" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
           <?php
           $locations = get_nav_menu_locations(); //get all menu locations
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-2' ] ); //get the menu object
@@ -36,7 +36,7 @@
         wp_nav_menu( array(
           'theme_location' => 'footer-menu-2',
           'container' => false,
-          'menu_class' => 'collapse d-md-block',
+          'menu_class' => 'collapse d-md-block c:text-black',
           'add_li_class' => 'py-10',
           'menu_id' => 'footer-menu-2'
         ) )
@@ -45,7 +45,7 @@
       <!-- --> 
 	  <!-- FOOTER COLUMN -->
       <div class="col-12 col-md-3">
-        <p class="font-weight-700 text-transform-uppercase d-table" data-toggle="collapse" data-target="#footer-menu-2" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
+        <p class="font-weight-700 text-transform-uppercase d-table text-black" data-toggle="collapse" data-target="#footer-menu-2" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
           <?php
           $locations = get_nav_menu_locations(); //get all menu locations
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-2' ] ); //get the menu object
@@ -57,7 +57,7 @@
         wp_nav_menu( array(
           'theme_location' => 'footer-menu-3',
           'container' => false,
-          'menu_class' => 'collapse d-md-block',
+          'menu_class' => 'collapse d-md-block c:text-black',
           'add_li_class' => 'py-10',
           'menu_id' => 'footer-menu-2'
         ) )
@@ -66,7 +66,7 @@
       <!-- --> 
 	  <!-- FOOTER COLUMN -->
       <div class="col-12 col-md-3">
-        <p class="font-weight-700 text-transform-uppercase d-table" data-toggle="collapse" data-target="#footer-menu-2" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
+        <p class="font-weight-700 text-transform-uppercase d-table text-black" data-toggle="collapse" data-target="#footer-menu-2" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
           <?php
           $locations = get_nav_menu_locations(); //get all menu locations
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-4' ] ); //get the menu object
@@ -78,7 +78,7 @@
         wp_nav_menu( array(
           'theme_location' => 'footer-menu-3',
           'container' => false,
-          'menu_class' => 'collapse d-md-block',
+          'menu_class' => 'collapse d-md-block c:text-black',
           'add_li_class' => 'py-10',
           'menu_id' => 'footer-menu-2'
         ) )
@@ -86,9 +86,7 @@
       </div>
       <!-- --> 
     </div>
-  
-	<?php dynamic_sidebar( 'sidebar-4' ); ?>
-	</div>
+  </div>
 </footer>
 <?php wp_footer(); ?>
 <script src="<?php bloginfo('template_url'); ?>/js/script.js"></script> 

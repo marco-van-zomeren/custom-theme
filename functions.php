@@ -106,10 +106,18 @@ if ( function_exists('register_sidebar') ) {
 		'description'   => __( 'This is the sidebar for the shop.' ),      
         'name'=>__( 'Woocommerce', 'textdomain' ),  
     );
+	$sidebar4 = array(
+		'id'            => 'sidebar-4',
+		'description'   => __( 'This is the custom area in the footer.' ),      
+        'name'=>__( 'Footer', 'textdomain' ),
+		'before_widget' => '',
+    	'after_widget' => '',
+    );
      
     register_sidebar($sidebar1);
     register_sidebar($sidebar2);
 	register_sidebar($sidebar3);
+	register_sidebar($sidebar4);
 }
 
 // BODY CLASS CATEGORIE

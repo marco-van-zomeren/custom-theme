@@ -17443,6 +17443,8 @@ cite .c\:text-black > * > a {
 .wp-block-image img {
   height: auto; }
 
+footer.text-white a, .c\:text-white > footer a, footer.hover\:text-white:hover a {
+  color: white; }
 footer *[aria-expanded="fale"] i {
   transform: rotate(0); }
 footer *[aria-expanded="true"] i {
