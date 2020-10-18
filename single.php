@@ -1,27 +1,23 @@
 <?php get_header();?>
-
 <main class="bg-white">
-  <article class="container mw-1-1">
+  <article class="container">
     <?php
-    /* Start the Loop */
     while ( have_posts() ): the_post();
     get_template_part( 'template-parts/post/content-single', get_post_format() );
-
     setPostViews( get_the_ID() );
-
-    endwhile; // End of the loop.
+    endwhile;
     ?>
   </article>
 </main>
 
 <!-- SHARE PAGE -->
-<section class="col-12 text-center p-20" id="color-switch">
-  <?php include("share-page-horizontal.php"); ?>
+<section class="bg-white text-center p-20">
+  <?php get_template_part( 'template-parts/share/share', 'page-horizontal'); ?>
 </section>
-<!-- --> 
+<!-- -->
 <!-- RELATED POSTS -->
 <section class="bg-white py-20 px-10 px-md-30">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-12 text-center">
         <h2 class="mb-20">Related</h2>
@@ -88,21 +84,4 @@
 
         loop: true,
     });
-
-// COLOR THIEF
-var colorThief = new ColorThief();
-
-// Make sure everything is loaded
-jQuery(window).load(function () {
-
-    // Create image object
-    var sourceImage = jQuery('#color-reference')[0];
-
-    // Get the dominant color of image
-    var color = colorThief.getColor(sourceImage);
-
-    // Use the new color as background for body
-    jQuery('#color-switch').css('background-color', 'rgb(' + color + ')');
-
-});
 </script>

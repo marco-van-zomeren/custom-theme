@@ -31,7 +31,7 @@
             <div class="d-none d-lg-inline-block float-left ml-lg-20">
               <?php
               if ( get_theme_mod( 'custom_nav-layout_cart-icon' ) == 1 ) {
-                get_template_part( 'nav', 'cart-icon' );
+                get_template_part( 'template-parts/nav', 'cart-icon' );
               }
               ?>
             </div>
@@ -49,7 +49,7 @@
     <div class="position-absolute w-50 h-50 justify-content-center top-0 right-0 d-flex d-lg-none z-6">
       <?php
       if ( get_theme_mod( 'custom_nav-layout_cart-icon' ) == 1 ) {
-        get_template_part( 'nav', 'cart-icon' );
+        get_template_part( 'template-parts/nav', 'cart-icon' );
       }
       ?>
     </div>

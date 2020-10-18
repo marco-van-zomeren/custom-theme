@@ -13,11 +13,11 @@
 <!-- NAV LAYOUT -->
   <?php
   if ( get_theme_mod( 'custom_nav-layout', 'default' ) == 'default' ):
-    get_template_part( 'nav' );
+    get_template_part( 'template-parts/nav/nav' );
   elseif ( get_theme_mod( 'custom_nav-layout', 'position-absolute' ) == 'position-absolute' ):
-    get_template_part( 'nav-position-absolute' );
+    get_template_part( 'template-parts/nav/nav', 'position-absolute' );
   elseif ( get_theme_mod( 'custom_nav-layout', 'logo-center' ) == 'logo-center' ):
-    get_template_part( 'nav-logo-center' );
+    get_template_part( 'template-parts/nav/nav', 'logo-center' );
   endif ?>
 <!-- --> 
 

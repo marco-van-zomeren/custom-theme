@@ -5,7 +5,7 @@
 </header>
 <section class="row">
   <aside class="col-3 d-none d-md-block">
-    <div class="position-sticky top-20 pl-20 z-1">
+    <div class="position-sticky top-20 z-1">
       <div class="d-block w-1-1 pb-20 js__share-page"> <a href="" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100 share-page__on-facebook"><i class="fab fa-facebook-f"></i></a> <a href="" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100 share-page__on-linkedin"><i class="fab fa-linkedin-in"></i></a> <a href="" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100 share-page__on-twitter"><i class="fab fa-twitter"></i></a> <a href="whatsapp://send?text=<?php the_title();?> <?php the_permalink();?>" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100" > <i class="fab fa-whatsapp text-black"></i></a> </div>
     </div>
   </aside>
@@ -14,10 +14,10 @@
     <?php $image_large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_large' ); ?>
     <?php $image_small = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_small' ); ?>
     <div class="mb-10 rounded overflow-hidden">
-      <picture class="w-1-1 rounded">
+      <picture class="w-1-1">
         <source media="(max-width: 420px)" srcset="<?php echo $image_small[0]; ?>">
         <source srcset="<?php echo $image_large[0]; ?>">
-        <img id="color-reference" class="w-1-1 rounded_sm" src="<?php echo $image_large[0]; ?>"> </picture>
+        <img class="w-1-1" src="<?php echo $image_large[0]; ?>"> </picture>
     </div>
     <?php endif; ?>
     <?php
@@ -31,10 +31,28 @@
       <?php the_excerpt(); ?>
     </div>
     <?php else : ?>
+    <!-- THE CONTENT -->
     <div>
       <?php the_content(); ?>
     </div>
-
+    <!-- --> 
+    <!-- AUTHOR -->
+    <div class="my-20">
+      <div class="block d-md-table-cell mb-20 align-top">
+        <div class="block w-100 h-100 mr-20 rounded-circle position-relative overflow-hidden">
+          <?php $user = wp_get_current_user();
+          if ( $user ):
+          ?>
+          <img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" alt="Profile picture author" class="object-fit-cover" />
+          <?php endif; ?>
+        </div>
+      </div>
+      <div class="d-table-cell align-top">
+        <p class="font-size-xs font-weight-700 m-0">About</p>
+        <p class="font-size-xs"><?php echo nl2br(get_the_author_meta('description')); ?></p>
+      </div>
+    </div>
+    <!-- -->
     <?php endif; ?>
     <!-- NEXT / PREV POST -->
     <div class="row py-20">
@@ -51,13 +69,12 @@
     <!-- --> 
     <!-- COMMENTS -->
     <div class="row mb-20">
-        <?php
-        if ( comments_open() || get_comments_number() ):
-          comments_template();
-        endif;
-        ?>
+      <?php
+      if ( comments_open() || get_comments_number() ):
+        comments_template();
+      endif;
+      ?>
     </div>
     <!-- --> 
   </article>
 </section>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/colorthief.js"></script>

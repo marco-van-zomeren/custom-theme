@@ -168,6 +168,9 @@ textarea {
 	font: inherit;
     margin: 0;
 	resize: none;
+	&.resize-none {
+		resize: none
+	}
     overflow: auto;
 }
 

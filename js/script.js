@@ -107,53 +107,18 @@ jQuery(window).on("load resize", function () {
 });
 
 // TEXTAREA //
-$(function () {
-        $(".js__textarea").autoResize()
-    }),
-    function () {
-        "use strict";
-        var e = this.$,
-            o = {
-                resize: e.noop,
-                minRows: 1,
-                maxRows: 0
-            };
-        e.fn.autoResize = function (n) {
-            var t = e.extend({}, o, n);
-            return this.filter("textarea").each(function () {
-                var o = e(this).css({
-                        "overflow-y": "hidden",
-                        height: "auto",
-                        resize: "none"
-                    }),
-                    n = o.get(0),
-                    r = function () {
-                        return !!n.scrollHeight && (!!n.baseScrollHeight || (function () {
-                            var e = n.value,
-                                o = n.rows;
-                            n.value = "", n.rows = 1, n.baseScrollHeight = n.scrollHeight, n.value = e, n.rows = o
-                        }(), !0))
-                    },
-                    s = function () {
-                        if (!r()) return !1;
-                        var e = parseInt(o.css("line-height"));
-                        n.rows = t.minRows;
-                        var s = Math.ceil((n.scrollHeight - n.baseScrollHeight) / e) + 1;
-                        t.maxRows > t.minRows && s > t.maxRows ? (n.rows = t.maxRows, o.css({
-                            "overflow-y": "auto"
-                        })) : (n.rows = Math.max(s, t.minRows), o.css({
-                            "overflow-y": "hidden"
-                        }))
-                    };
-                (!n.rows || n.rows < t.minRows) && (n.rows = t.minRows), o.off(".resize"), ! function () {
-                    if ("oninput" in document.body) return !0;
-                    document.body.setAttribute("oninput", "return");
-                    var e = "function" == typeof document.body.oninput;
-                    return delete document.body.oninput, e
-                }() ? "onpropertychange" in document.body ? o.on("propertychange.resize", s) : o.on("keypress.resize", s) : o.on("input.resize", s), o.one("focus", s), s()
-            }), this
-        }
-    }.call(this);
+function addAutoResize() {
+  document.querySelectorAll('[data-autoresize]').forEach(function (element) {
+    element.style.boxSizing = 'border-box';
+    var offset = element.offsetHeight - element.clientHeight;
+    element.addEventListener('input', function (event) {
+      event.target.style.height = 'auto';
+      event.target.style.height = event.target.scrollHeight + offset + 'px';
+    });
+    element.removeAttribute('data-autoresize');
+  });
+}
+addAutoResize();
 
 // ANIMATE
 var animateHTML = function () {
