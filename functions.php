@@ -20,17 +20,6 @@ add_image_size( 'featured-image_l', 1000, 1000 );
 add_image_size( 'featured-image_s', 600, 600 );
 add_image_size( 'featured-image_1x1', 800, 800 );
 
-// ORDER POSTS
-function prefix_modify_query_order( $query ) {
-  if ( is_main_query() ) {
-
-    $args =  array( 'post_date' => 'DESC' );
-
-    $query->set( 'orderby', $args );
-  }
-}
-add_action( 'pre_get_posts', 'prefix_modify_query_order' );
-
 // MENU
 function wpb_custom_new_menu() {
   register_nav_menu('main-menu',__( 'Main menu' ));

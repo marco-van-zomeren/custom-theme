@@ -1,13 +1,21 @@
 <!-- SPOTLIGHT -->
-<section class="bg-primary p-20 p-md-60 pt-md-0 overflow-hidden position-relative">
+<section class="bg-primary pt-20 p-md-60 pt-md-0 overflow-hidden position-relative">
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-6 col-xl-7 d-flex justify-content-center">
         <div class="align-self-center text-center">
-          <p class="text-tertiary font-size-sm animate__fadeInUp js__fx"><?php echo get_theme_mod( 'spotlight_preheader', 'No text has been saved yet.' ); ?></p>
-          <h1 class="text-gray-800 display-5 font-playfair  animate__fadeInUp delay-1 js__fx"><?php echo get_theme_mod( 'spotlight_title', 'No text has been saved yet.' ); ?></h1>
-          <p class="mb-20 text-gray-600 animate__fadeInUp delay-2 js__fx"><?php echo get_theme_mod( 'spotlight_intro', 'No text has been saved yet.' ); ?></p>
-          <a href="<?php echo get_theme_mod( 'spotlight_cta-url', '/' ); ?>" class="btn border bw-2 border-tertiary text-uppercase text-tertiary hover:text-white hover:bg-tertiary rounded-pill mb-20 mb-md-0 animate__fadeInUp delay-3 js__fx"><?php echo get_theme_mod( 'spotlight_cta', 'Call to action' ); ?></a> </div>
+          <p class="text-tertiary font-size-sm animate__fadeInUp js__fx">
+            <?php block_field( 'preheader' ); ?>
+          </p>
+          <h1 class="text-gray-800 display-5 font-playfair  animate__fadeInUp delay-1 js__fx">
+            <?php block_field( 'title' ); ?>
+          </h1>
+          <p class="mb-20 text-gray-600 animate__fadeInUp delay-2 js__fx">
+            <?php block_field( 'intro' ); ?>
+          </p>
+          <a href="<?php block_field( 'ctaurl' ); ?>" class="btn border bw-2 border-tertiary text-uppercase text-tertiary hover:text-white hover:bg-tertiary rounded-pill mb-20 mb-md-0 animate__fadeInUp delay-3 js__fx">
+          <?php block_field( 'ctatext' ); ?>
+          </a> </div>
       </div>
       
       <!-- SWIPER -->
@@ -19,7 +27,7 @@
               $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'category_name' => 'homepage',
+                'category_name' => block_value( 'category' ),
               );
               $arr_posts = new WP_Query( $args );
               if ( $arr_posts->have_posts() ):
@@ -49,8 +57,8 @@
               <?php
               endwhile;
               endif;
-			
-			  wp_reset_query();
+
+              wp_reset_query();
               ?>
             </div>
             <!-- Add Arrows -->
@@ -78,5 +86,5 @@
 
         loop: true
     });
-</script>
+</script> 
 <!-- --> 

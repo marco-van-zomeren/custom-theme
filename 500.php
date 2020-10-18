@@ -1,4 +1,4 @@
-<?php include("header.php"); ?>
+<?php get_header();?>
 
 <div class="page-container col-12 xs-md:p-0 plr">
     <!-- BEGIN MAIN CONTENT -->
@@ -21,4 +21,4 @@
     <!-- EINDE MAIN CONTENT -->
 </div>
 
-<?php include("footer.php"); ?>
+<?php get_footer(); ?>

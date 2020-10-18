@@ -1,4 +1,5 @@
-<?php include("header.php"); ?>
+<?php get_header();?>
+
 <main class="bg-white">
   <article class="container mw-1-1">
     <?php
@@ -62,7 +63,7 @@
   </div>
 </section>
 <!-- -->
-<?php include("footer.php"); ?>
+<?php get_footer(); ?>
 <script type="text/javascript">
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 3,

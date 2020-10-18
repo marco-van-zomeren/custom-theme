@@ -1,5 +1,5 @@
 <?php /* Template Name: Page front */ ?>
-<?php include("header.php"); ?>
+<?php get_header();?>
 <!-- HOMEPAGE SLIDER -->
 <section class="vh-50 vh-lg-80">
     <div class="swiper-container" id="swiper_homepage">
@@ -63,7 +63,7 @@
 
 <!-- -->
 
-<?php include("footer.php"); ?>
+<?php get_footer(); ?>
 <script>
     var swiper = new Swiper('#swiper_homepage', {
         slidesPerView: 1,

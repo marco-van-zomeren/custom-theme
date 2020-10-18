@@ -17439,6 +17439,8 @@ cite .c\:text-black > * > a {
 .wp-block-image img {
   height: auto; }
 
+footer.text-white a, .c\:text-white > footer a, footer.hover\:text-white:hover a {
+  color: white; }
 footer *[aria-expanded="fale"] i {
   transform: rotate(0); }
 footer *[aria-expanded="true"] i {
@@ -17917,6 +17919,11 @@ nav .nav__toggle-sub.open {
 .cart .cart__total {
   line-height: 31px; }
 
+.wp-block-coblocks-column.display-flex > * {
+  display: flex; }
+.wp-block-coblocks-column.h-100\% > * {
+  height: 100%; }
+
 .wp-block-coblocks-post-carousel .slick-arrow {
   position: absolute !important;
   border-radius: 100%;
@@ -17966,10 +17973,15 @@ nav .nav__toggle-sub.open {
 .wp-block-coblocks-post-carousel.slide-m-0 .slick-slide {
   margin: 0 !important; }
 
-.wp-block-coblocks-column.display-flex > * {
-  display: flex; }
-.wp-block-coblocks-column.h-100\% > * {
-  height: 100%; }
+.coblocks-lightbox .coblocks-lightbox__heading {
+  right: 20px !important;
+  left: 20px !important; }
+.coblocks-lightbox button {
+  border: 0 !important; }
+.coblocks-lightbox .coblocks-lightbox__arrow {
+  position: absolute !important;
+  top: 46% !important;
+  margin: 0 2% !important; }
 
 :root {
   --color-btn-primary: black;

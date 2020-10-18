@@ -1,3 +1,15 @@
+// COLUMN
+.wp-block-coblocks-column {
+	&.display-flex >* {
+	display: flex
+	} 
+
+	&.h-100\% >* {
+	height: 100%
+	}
+}
+
+// POST CAROUSEL
 .wp-block-coblocks-post-carousel {
 	.slick-arrow {
 		position: absolute!important;
@@ -81,13 +93,23 @@
 	}
 }
 
-.wp-block-coblocks-column {
-	&.display-flex >* {
-	display: flex
-	} 
-
-	&.h-100\% >* {
-	height: 100%
+// LIGHTBOX
+.coblocks-lightbox {
+	.coblocks-lightbox__heading {
+		top:20px!important;
+		right: 20px!important;
+		left:20px!important;
+		.coblocks-lightbox__count {
+		margin-left: 20px;
+		}
+	}
+	button {
+		border: 0!important;
+	}
+	.coblocks-lightbox__arrow {
+		position: absolute!important;
+		top:46%!important;
+		margin: 0 2%!important;
 	}
 }
 

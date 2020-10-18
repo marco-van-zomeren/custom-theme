@@ -1,5 +1,5 @@
 <?php /* Template Name: Custom with contact form */ ?>
-<?php include("header.php"); ?>
+<?php get_header();?>
 <main class="col-12 grid bg-white">
   <section class="col-12">
  
@@ -17,4 +17,4 @@
     </div>
   </section>
 </main>
-<?php include("footer.php"); ?>
+<?php get_footer(); ?>

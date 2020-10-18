@@ -1,4 +1,4 @@
-<footer class="<?php echo get_theme_mod( 'custom_footer-background-color', 'bg-white' );?> p-0 p-md-40">
+<footer class="p-0 p-md-40">
   <div class="container">
     <div class="row"> 
       <!-- FOOTER COLUMN 1 -->

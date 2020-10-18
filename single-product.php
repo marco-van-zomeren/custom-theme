@@ -1,4 +1,4 @@
-<?php include("header.php"); ?>
+<?php get_header();?>
 <main class="bg-white p-20">
   <?php
   /* Start the Loop */
@@ -10,4 +10,4 @@
 <section class="text-center p-20">
   <?php include("share-page-horizontal.php"); ?>
 </section>
-<?php include("footer.php"); ?>
+<?php get_footer(); ?>

@@ -1,12 +1,23 @@
-<?php include("header.php"); ?>
+<?php get_header();?>
+<?php
+if ( get_theme_mod( 'custom_nav-layout', 'default' ) == 'default' ): ?>
 <main class="bg-white">
-	<div class="container">
-		<?php
-		/* Start the Loop */
-		while ( have_posts() ) : the_post();
-		get_template_part( 'template-parts/page/content-page', get_post_format() );    
-		endwhile; // End of the loop.
-		?>
-	</div>
+<?php
+elseif ( get_theme_mod( 'custom_nav-layout', 'position-absolute' ) == 'position-absolute' ): ?>
+<main class="bg-white pt-80">
+<?
+
+elseif ( get_theme_mod( 'custom_nav-layout', 'logo-center' ) == 'logo-center' ): ?>
+<main class="bg-white">
+  <?php
+  endif ?>
+  <div class="container">
+    <?php
+    /* Start the Loop */
+    while ( have_posts() ): the_post();
+    get_template_part( 'template-parts/page/content-page', get_post_format() );
+    endwhile; // End of the loop.
+    ?>
+  </div>
 </main>
-<?php include("footer.php"); ?>
+<?php get_footer(); ?>

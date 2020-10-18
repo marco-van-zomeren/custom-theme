@@ -1,4 +1,4 @@
-<?php include("header.php"); ?>
+<?php get_header();?>
 <main class="bg-white">
   <div class="container py-20">
     <header class="row text-center">
@@ -71,4 +71,4 @@
     </section>
   </div>
 </main>
-<?php include("footer.php"); ?>
+<?php get_footer(); ?>
