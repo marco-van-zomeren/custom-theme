@@ -1,5 +1,4 @@
-<!-- SPOTLIGHT -->
-<section class="bg-primary pt-20 p-md-60 pt-md-0 overflow-hidden position-relative">
+<section class="bg-white pt-20 p-md-60 pt-md-0 overflow-hidden position-relative">
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-6 col-xl-7 d-flex justify-content-center">
@@ -21,7 +20,7 @@
       <!-- SWIPER -->
       <div class="col-12 col-lg-6 col-xl-5">
         <div class="mb-20 mb-md-0 p-0 pl-md-40">
-          <div class="swiper-container" id="swiper_homepage">
+          <div class="swiper-container" id="swiper">
             <div class="swiper-wrapper vh-50 vh-md-30 vh-lg-50 mh-500">
               <?php
               $args = array(
@@ -72,19 +71,16 @@
   </div>
 </section>
 <script type="text/javascript">
-    var swiper = new Swiper('#swiper_homepage', {
+    var swiper = new Swiper('#swiper', {
         slidesPerView: 1,
         spaceBetween: 20,
         keyboard: {
             enabled: true,
         },
-
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
         loop: true
     });
-</script> 
-<!-- --> 
+</script>

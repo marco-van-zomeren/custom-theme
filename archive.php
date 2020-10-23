@@ -7,7 +7,7 @@
   </h1>
 </header>
 <section class="row text-center">
-	<?php get_template_part( 'template-parts/nav','category.php'); ?>
+	<?php get_template_part( 'template-parts/nav/nav', 'category'); ?>
 </section>
 <section class="row text-left p-0 px-40">
   <?php if ( have_posts() ) : ?>

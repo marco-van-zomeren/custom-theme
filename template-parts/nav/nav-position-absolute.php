@@ -27,7 +27,15 @@
         </div>
         <div class="col-12 col-lg-10 p-0 d-flex justify-content-center text-lg-right"> 
           <!-- MENU -->
-          <?php get_template_part( 'template-parts/nav', 'menu' ); ?>
+          <?php get_template_part( 'template-parts/nav/nav', 'menu' ); ?>
+          <!-- --> 
+		  <!-- ACCOUNT -->
+          <?php
+          if ( get_theme_mod( 'custom_nav-layout_account-icon' ) == 1 ) {
+            get_template_part( 'template-parts/nav/nav', 'account-icon' );
+          }
+          ?>
+          <!-- --> 
           <!-- --> 
           <!-- CART -->
           <div class="h-50 lh-50 d-flex justify-content-center ml-20 position-absolute top-0 right-0 position-lg-relative">

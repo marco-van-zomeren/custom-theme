@@ -1,5 +1,4 @@
-<!-- NAV -->
-<section class="nav p-lg-20 position-relative z-6">
+<section class="nav bg-white p-lg-20 position-relative z-6">
   <div class="container p-0 position-relative">
     <nav class="h-50 h-lg-90 position-relative z-6"> 
       <!-- LOGO MOBILE -->
@@ -9,8 +8,7 @@
         $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id, 'full' );
         echo '<img class="d-inline-block h-40 position-relative" src="' . esc_url( $custom_logo_url ) . ';" alt="">';
         ?>
-        </a> 
-	  </div>
+        </a> </div>
       <!-- --> 
       <!-- NAV -->
       <div class="row m-0 p-0 p-lg-20">
@@ -27,21 +25,20 @@
         </div>
         <div class="col-12 col-lg-10 p-0 d-flex justify-content-center text-lg-right"> 
           <!-- MENU -->
+          <?php get_template_part( 'template-parts/nav/nav', 'menu' ); ?>
+          <!-- --> 
+          <!-- ACCOUNT -->
           <?php
-          wp_nav_menu( array(
-            'theme_location' => 'main-menu',
-            'container' => false,
-            'menu_class' => 'ml-auto mb-0 bg-white text-center align-self-center c:d-md-inline-block c:mr-md-20 c:color-gray-1 c:color-md-black position-relative mr-lg-n20 collapse d-lg-block',
-            'menu_id' => 'collapse',
-            'add_li_class' => 'text-black c:hover:text-tertiary c:p-20 c:p-lg-0 mr-md-20 text-uppercase transition-20'
-          ) )
+          if ( get_theme_mod( 'custom_nav-layout_account-icon' ) == 1 ) {
+            get_template_part( 'template-parts/nav/nav', 'account-icon' );
+          }
           ?>
           <!-- --> 
           <!-- CART -->
           <div class="h-50 lh-50 d-flex justify-content-center ml-20 position-absolute top-0 right-0 position-lg-relative">
             <?php
             if ( get_theme_mod( 'custom_nav-layout_cart-icon' ) == 1 ) {
-              get_template_part( 'nav', 'cart-icon' );
+              get_template_part( 'template-parts/nav/nav', 'cart-icon' );
             }
             ?>
           </div>
@@ -57,4 +54,3 @@
   <!-- -->
   <div class="nav__content-overlay z-4"></div>
 </section>
-<!-- --> 

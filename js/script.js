@@ -1,8 +1,8 @@
 // TABS
-$('.js__tabs ul.tabs__list li').clone().appendTo(".list__clone");
+jQuery('.js__tabs ul.tabs__list li').clone().appendTo(".list__clone");
 
-$(window).on("load resize ", function () {
-    $('.js__tabs ul.tabs__list li').each(function () {
+jQuery(window).on("load resize ", function () {
+    jQuery('.js__tabs ul.tabs__list li').each(function () {
 
         var tabsTotalWidth = $("ul.tabs__list").width();
 
@@ -41,14 +41,14 @@ $(window).on("load resize ", function () {
     });
 });
 
-$(".js__tabs .tabs__toggle").click(function () {
-    $(this).toggleClass("open")
-    $(".tabs__more").toggleClass("show");
+jQuery(".js__tabs .tabs__toggle").click(function () {
+    jQuery(this).toggleClass("open")
+    jQuery(".tabs__more").toggleClass("show");
 });
 
 // SUB-MENU 
-$(".menu-item-has-children > a").click(function () {
-	$(this).toggleClass("active").next(".sub-menu").toggle();
+jQuery(".menu-item-has-children > a").click(function () {
+	jQuery(this).toggleClass("active").next(".sub-menu").toggle();
 });
 
 // SHARE PAGE

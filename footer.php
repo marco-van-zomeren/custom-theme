@@ -43,7 +43,7 @@
         ?>
       </div>
       <!-- --> 
-	  <!-- FOOTER COLUMN 3 -->
+      <!-- FOOTER COLUMN 3 -->
       <div class="col-12 col-md-3">
         <p class="font-weight-700 text-transform-uppercase d-table" data-toggle="collapse" data-target="#footer-menu-3" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
           <?php
@@ -64,7 +64,7 @@
         ?>
       </div>
       <!-- --> 
-	  <!-- FOOTER COLUMN 4 -->
+      <!-- FOOTER COLUMN 4 -->
       <div class="col-12 col-md-3">
         <p class="font-weight-700 text-transform-uppercase d-table" data-toggle="collapse" data-target="#footer-menu-4" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
           <?php
@@ -86,13 +86,32 @@
       </div>
       <!-- --> 
     </div>
-  
-	<?php dynamic_sidebar( 'sidebar-4' ); ?>
-	</div>
+    <?php dynamic_sidebar( 'sidebar-4' ); ?>
+  </div>
 </footer>
 <?php wp_footer(); ?>
-<script src="<?php bloginfo('template_url'); ?>/js/script.js"></script> 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-</body>
-</html>
+<script>
+    // AUDIO PLAYER
+    GreenAudioPlayer.init({
+        selector: '.player', // inits Green Audio Player on each audio container that has class "player"
+        stopOthersOnPlay: true
+    });
+	// ISOTOPE
+	var $grid = jQuery('.grid').isotope({
+	  itemSelector: '.grid-item',
+
+	});
+	jQuery('.filters-button-group').on( 'click', 'button', function() {
+	  var filterValue = jQuery( this ).attr('data-filter');
+	  filterValue = filterValue;
+	  $grid.isotope({ filter: filterValue });
+	});
+	jQuery('.button-group').each( function( i, buttonGroup ) {
+	  var $buttonGroup = jQuery( buttonGroup );
+	  $buttonGroup.on( 'click', 'button', function() {
+		$buttonGroup.find('.is-checked').removeClass('is-checked');
+		jQuery( this ).addClass('is-checked');
+	  });
+	});
+</script>
+</body></html>

@@ -5,17 +5,16 @@
         <?php the_title(); ?>
       </h1>
     </header>
-    <?php if ( is_search() ) : // Only display Excerpts for Search ?>
-    <div>
-      <?php the_excerpt(); ?>
-    </div>
-    <?php else : ?>
-    <div>
-      <?php the_content(); ?>
-    </div>
-    <!-- .entry-content -->
-    <?php endif; ?>
-    <?php // If comments are open or we have at least one comment, load up the comment template.
+    <?php
+    if ( is_search() ):
+      the_excerpt();
+
+    else :
+
+      the_content();
+
+    endif;
+
     if ( comments_open() || get_comments_number() ) {
       comments_template();
     }

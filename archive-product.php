@@ -26,11 +26,12 @@
     </section>
     
     <!-- SHOP LAYOUT -->
-    <?php if( get_theme_mod( 'custom_shop-layout', 'default' ) == 'default' ) : ?>
-    <?php include("shop-layout-default.php"); ?>
-    <?php elseif( get_theme_mod( 'custom_shop-layout', 'sidebar-left' ) == 'sidebar-left' ) : ?>
-    <?php include("shop-layout-sidebar-left.php"); ?>
-    <?php endif ?>
+    <?php
+    if ( get_theme_mod( 'custom_shop-layout', 'default' ) == 'default' ):
+      get_template_part( 'template-parts/shop/shop', 'layout-default' );
+    elseif ( get_theme_mod( 'custom_shop-layout', 'sidebar-left' ) == 'sidebar-left' ):
+      get_template_part( 'template-parts/shop/shop', 'layout-sidebar-left' );
+    endif ?>
     <!-- --> 
   </div>
 </main>

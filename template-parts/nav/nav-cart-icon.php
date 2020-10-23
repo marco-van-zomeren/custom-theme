@@ -11,4 +11,5 @@ global $woocommerce;
 $count = $woocommerce->cart->cart_contents_count;
 echo sprintf( _n( '%d product', $count, 'text domain' ) );
 ?>
-</span> </a>
+</span> 
+</a>
