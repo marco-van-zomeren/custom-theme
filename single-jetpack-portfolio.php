@@ -27,27 +27,29 @@ get_header();
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <?php
-          $related = get_posts( array( 'category__in' => wp_get_post_categories( $post->ID ), 'numberposts' => 6, 'post__not_in' => array( $post->ID ) ) );
+
+          $related = get_posts( array( 'category__in' => wp_get_post_categories( $post->ID ), 'numberposts' => 5, 'post_type' => 'jetpack-portfolio', 'post__not_in' => array( $post->ID ) ) );
           if ( $related )
             foreach ( $related as $post ) {
               setup_postdata( $post );
               ?>
-          <div id="post-<?php the_ID(); ?>" <?php post_class( "swiper-slide col-12 col-md-4 block block_link position-relative"); ?>> <a class="block__link" href="<?php the_permalink(); ?>"></a>
+          <div id="post-<?php the_ID(); ?>" <?php post_class( "swiper-slide block block_link pb-20 position-relative overflow-hidden"); ?>> <a class="block__link" href="<?php the_permalink(); ?>"></a>
             <?php if (has_post_thumbnail( $post->ID ) ): ?>
-            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_s' ); ?>
-            <div class="block__image-container overflow-hidden">
-              <div class="block__image col-12 h-300" style="background-image: url('<?php echo $image[0]; ?>'); background-position:center"> </div>
-            </div>
-            <?php endif; ?>
-            <div class="pt-20">
-              <header class="col-12 align-self-center justify-content-center">
-                <h3 class="text-white text-center">
-                  <?php the_title(); ?>
-                </h3>
-              </header>
+            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_small' ); ?>
+            <div class="block__content">
+              <div class="block__image-container position-relative overflow-hidden">
+                <div class="block__image h-200 h-md-300" style="background-image: url('<?php echo $image[0]; ?>'); background-position:center center; background-size:cover;"> </div>
+              </div>
+              <?php endif; ?>
             </div>
           </div>
-          <?php } wp_reset_postdata(); ?>
+          <?php
+          }
+          wp_reset_postdata();
+          ?>
+          
+          <!-- end custom related loop, isa --> 
+          
         </div>
         <!-- Add Arrows -->
         <div class="swiper-button-next top-150"></div>

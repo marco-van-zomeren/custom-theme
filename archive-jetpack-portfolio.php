@@ -15,13 +15,13 @@
 
         foreach ( $terms as $term ) {
           ?>
-        <button data-filter=".<?php echo $term->name; ?>"><?php echo $term->name; ?></button>
+        <button class="bg-transparent text-black font-size-xs p-5 px-20 border bw-1 rounded-pill m-5" data-filter=".<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
         <?php
         }
         ?>
       </div>
     </section>
-    <section class="px-20 ">
+    <section class="px-md-20 px-lg-0">
       <div class="row text-left grid">
         <div class="grid-sizer col-12 col-md-4"></div>
         <?php if ( have_posts() ) : ?>

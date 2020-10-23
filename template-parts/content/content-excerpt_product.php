@@ -2,7 +2,7 @@
     <a class="block__link" href="<?php the_permalink(); ?>"></a>
     <?php if (has_post_thumbnail( $post->ID ) ): ?>
     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_small' ); ?>
-    <div class="block__image-container overflow-hidden grid">
+    <div class="block__image-container overflow-hidden">
         <div class="block__image h-200 h-md-300 relative col-12" style="background-image: url('<?php echo $image[0]; ?>'); background-position:center;">
         </div>
     </div>

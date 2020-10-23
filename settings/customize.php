@@ -178,20 +178,6 @@ function custom_customizer( $wp_customize ) {
       )
     )
   );
-  // Archive setting
-  $wp_customize->add_setting( 'custom_blog-archive' );
-  $wp_customize->add_control(
-    new WP_Customize_Control(
-      $wp_customize,
-      'custom_blog-archive',
-      array(
-        'label' => __( 'Exclude excerpt from these categories', 'custom-theme' ),
-        'section' => 'custom_blog',
-        'settings' => 'custom_blog-archive',
-        'type' => 'text'
-      )
-    )
-  );
 
   // Nav layout
   $wp_customize->add_section( 'custom_nav-layout', array(

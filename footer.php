@@ -1,4 +1,4 @@
-<footer class="p-0 p-md-40">
+<footer class="pt-20 pt-md-40 px-0 px-md-40">
   <div class="container">
     <div class="row"> 
       <!-- FOOTER COLUMN 1 -->

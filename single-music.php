@@ -7,25 +7,25 @@
 get_header();
 ?>
 <main class="bg-white">
-	<div class="container">
-	  <?php
-	  /* Start the Loop */
-	  while ( have_posts() ): the_post();
-	  get_template_part( 'template-parts/post/content-single', get_post_format() );
+  <div class="container">
+    <?php
+    /* Start the Loop */
+    while ( have_posts() ): the_post();
+    get_template_part( 'template-parts/post/content-single', get_post_format() );
 
-	  setPostViews( get_the_ID() );
+    setPostViews( get_the_ID() );
 
-	  endwhile; // End of the loop.
-	  ?>
-	</div>
+    endwhile; // End of the loop.
+    ?>
+  </div>
 </main>
 <aside class="col-12 text-center p-20">
-    <?php  get_template_part( 'template-parts/share', 'share-page-horizontal.php'); ?>
+  <?php get_template_part( 'template-parts/share', 'share-page-horizontal.php'); ?>
 </aside>
-<section class="bg-dark-blue container">
-  <div class="p-0 p-md-40">
+<section class="bg-secondary pt-40">
+  <div class="container">
     <div class="text-center mb-20">
-      <h2 class="text-white">Related</h2>
+      <h2 class="display-6 text-white">Related</h2>
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -66,8 +66,6 @@ get_header();
   </div>
 </section>
 <?php get_footer(); ?>
-
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/audioplayer.js"></script> 
 <script type="text/javascript">
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 4,
@@ -86,11 +84,5 @@ get_header();
             prevEl: '.swiper-button-prev',
         },
         loop: true,
-    });
-
-    // AUDIO PLAYER
-    GreenAudioPlayer.init({
-        selector: '.player', 
-        stopOthersOnPlay: true
     });
 </script>

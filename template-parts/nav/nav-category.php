@@ -4,17 +4,16 @@
       <div class="tabs js__tabs">
         <div class="tabs__container">
           <ul class="tabs tabs__list c:text-black c:hover:text-tertiary text-uppercase">
-            <?php
-            $categories = get_the_category();
-            $category_id = $categories[ 0 ]->cat_ID;
-
-            wp_list_categories( array(
-              'child_of' => $category_id,
-              'show_count' => false,
-              'title_li' => __( '' ),
-              'hide_empty' => true,
-            ) );
-            ?>
+          <?php
+		  $blogCategory =  get_theme_mod( 'custom_blog-category');
+			
+          wp_list_categories( array(
+			'child_of' => $blogCategory,
+            'show_count' => false,
+            'title_li' => __( '' ),
+            'hide_empty' => true,
+          ) );
+          ?>
           </ul>
           <span class="tabs__toggle-container"> <a class="tabs__toggle text-black">More<span class="icon--toggle"></span></a></span></div>
       </div>
