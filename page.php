@@ -17,5 +17,5 @@ elseif ( get_theme_mod( 'custom_nav-layout', 'logo-center' ) == 'logo-center' ):
     endwhile;
     ?>
   </div>
-</main>
+</main> 
 <?php get_footer(); ?>
