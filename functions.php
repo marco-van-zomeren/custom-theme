@@ -109,6 +109,7 @@ function my_myme_types( $mime_types ) {
   return $mime_types;
 }
 
+require_once( get_template_directory() . '/settings/archive.php' );
 require_once( get_template_directory() . '/settings/customize.php' );
 require_once( get_template_directory() . '/settings/comments.php' );
 require_once( get_template_directory() . '/settings/counter.php' );

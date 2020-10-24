@@ -178,6 +178,19 @@ function custom_customizer( $wp_customize ) {
       )
     )
   );
+  $wp_customize->add_setting( 'custom_documentation-category' );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      'custom_documentation-category',
+      array(
+        'label' => __( 'Documentation category', 'custom-theme' ),
+        'section' => 'custom_blog',
+        'settings' => 'custom_documentation-category',
+        'type' => 'text'
+      )
+    )
+  );
 
   // Nav layout
   $wp_customize->add_section( 'custom_nav-layout', array(
