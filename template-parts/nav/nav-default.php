@@ -26,8 +26,8 @@
         <div class="col-12 col-lg-10 p-0 d-flex justify-content-center text-lg-right"> 
           <!-- MENU -->
           <?php get_template_part( 'template-parts/nav/nav', 'menu' ); ?>
-          <!-- --> 
-			
+          <!-- --> 	
+		 <div class="position-absolute position-lg-relative top-0 right-0">	
           <!-- SEARCH -->
           <?php
           if ( get_theme_mod( 'custom_nav-layout_search-icon' ) == 1 ) {
@@ -43,7 +43,7 @@
           ?>
           <!-- --> 
           <!-- CART -->
-          <div class="h-50 lh-50 d-flex justify-content-center ml-20 position-absolute top-0 right-0 position-lg-relative">
+          <div class="h-50 lh-50 d-flex justify-content-center float-left ml-10">
             <?php
             if ( get_theme_mod( 'custom_nav-layout_cart-icon' ) == 1 ) {
               get_template_part( 'template-parts/nav/nav', 'cart-icon' );
@@ -51,14 +51,18 @@
             ?>
           </div>
           <!-- --> 
+		  </div>
         </div>
       </div>
-      <!-- --> 
-      
+      <!-- -->
     </nav>
   </div>
   <!-- TOGGLE MOBILE MENU -->
-  <button class="btn_toggle-menu d-block d-lg-none position-absolute left-0 top-0 h-50 w-50 border-0 rounded-0 z-6 bg-transparent" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse"> <span class="btn_toggle-menu__box position-relative top-4"> <span class="btn_toggle-menu__inner"></span> </span> </button>
+  <button class="btn_toggle-menu d-block d-lg-none position-absolute left-0 top-0 h-50 w-50 border-0 rounded-0 z-6 bg-transparent" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+	  <span class="btn_toggle-menu__box position-relative top-4">
+	  	<span class="btn_toggle-menu__inner"></span>
+	  </span>
+  </button>
   <!-- -->
   <div class="nav__content-overlay z-4"></div>
 </section>

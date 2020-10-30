@@ -1,0 +1,79 @@
+.woocommerce {
+	a.remove {
+		&:hover {
+			color: red !Important;
+			border: none;
+		}
+		line-height: 0.95;
+	}
+
+	ul.products li.product a img {
+		border-radius: 5px;
+	}
+
+	label {
+		width: auto
+	}
+
+	.quantity input {
+		float: none;
+	}
+
+	table.cart td.actions .coupon {
+		.input-text:not(.bg-white) {
+			padding: 10px;
+			width: 100%;
+			background: white;
+		}
+		button.button {
+			width: 100%;
+			margin-top: 10px;
+		}
+	}
+
+	#add_payment_method table.cart img,
+	.woocommerce-cart table.cart img,
+	.woocommerce-checkout table.cart img {
+		float: left;
+	}
+
+	#add_payment_method #payment ul.payment_methods,
+	.woocommerce-cart #payment ul.payment_methods,
+	.woocommerce-checkout #payment ul.payment_methods {
+		padding: 0;
+	}
+
+	.payment_methods {
+		display: none !important;
+	}
+
+	.woocommerce-message,
+	.woocommerce-info,
+	.woocommerce-error {
+		color: var(--bs-gray-900);
+		border: 3px solid var(--bs-gray-500);
+		background: none;
+		a {
+			color: var(--text-link);
+		}
+		&::before {
+			color: var(--bs-gray-900);
+		}
+	}
+
+	.button.wc-forward {
+		width: 100%;
+		margin-bottom: 15px!important;
+	}
+
+	ul.order_details li {
+		width: 100%;
+		margin-bottom: 1em;
+		border-right: none;
+	}
+
+	form .form-row {
+		padding: 0;
+		margin: 0 0 20px!important;
+	}
+}

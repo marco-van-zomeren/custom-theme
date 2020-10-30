@@ -1,0 +1,21 @@
+.woocommerce {
+	.swiper-container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+	.swiper-slide {
+		background-size: cover;
+		background-position: center;
+	}
+
+	.gallery-thumbs .swiper-slide {
+		height: 100%;
+		opacity: 0.4;
+	}
+
+	.gallery-thumbs .swiper-slide-thumb-active {
+		opacity: 1;
+	}
+}

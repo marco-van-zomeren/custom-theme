@@ -1,0 +1,24 @@
+.woocommerce {
+	.woocommerce-form__input-checkbox {
+		-webkit-appearance: checkbox!important;
+		box-shadow: none!important;
+		display: block!important;
+		height: 20px!important;
+		width: 20px!important;
+		margin-right: 5px!important;
+	}
+
+	form .show-password-input, .woocommerce-page form .show-password-input {
+		top:0!important;
+		right:0!important;
+	}
+
+	#reviews #comment {
+		height: auto!important;
+	}
+
+	form.checkout_coupon, form.login, form.register {
+		padding: 0!important;
+		border: 0!important;
+	}
+}

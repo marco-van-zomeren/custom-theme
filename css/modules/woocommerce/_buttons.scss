@@ -1,0 +1,8 @@
+a.woocommerce{
+	a.remove:hover,
+	#add_payment_method #payment,
+	.woocommerce-cart #payment,
+	.woocommerce-checkout #payment {
+		background: transparent;
+	}
+}

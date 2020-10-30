@@ -40,11 +40,10 @@
     <div class="my-20">
       <div class="block d-md-table-cell mb-20 align-top">
         <div class="block w-100 h-100 mr-20 rounded-circle position-relative overflow-hidden">
-          <?php $user = wp_get_current_user();
-          if ( $user ):
-          ?>
-          <img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" alt="Profile picture author" class="object-fit-cover" />
-          <?php endif; ?>
+          <img src="<?php echo esc_url( get_avatar_url(  get_the_author_meta( 'ID' ) ) ); ?>" alt="Profile picture author" class="object-fit-cover" />
+         
+			
+		
         </div>
       </div>
       <div class="d-table-cell align-top">

@@ -1,0 +1,25 @@
+.woocommerce {
+	li.woocommerce-MyAccount-navigation-link {
+		a {
+		padding: 10px;
+		display: block;
+		border-radius: 5px;
+		}
+		&.is-active a {
+			background: black;
+			color: white;
+		}
+	}
+
+	em {
+		font-size: 0.8rem;
+	}
+
+	.woocommerce-Message {
+		float: left;
+		.woocommerce-Button {
+			float: none;
+			width: 100%
+		}
+	}
+}
