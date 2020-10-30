@@ -60,6 +60,17 @@ function custom_customizer( $wp_customize ) {
     'title' => __( 'Colors', 'custom-theme' ),
     'priority' => 101,
   ) );
+  // Color body
+  $wp_customize->add_setting( 'custom_body-color' );
+  $wp_customize->add_control( new WP_Customize_Color_Control(
+    $wp_customize,
+    'custom_body-color',
+    array(
+      'label' => __( 'Body color', 'custom-theme' ),
+      'section' => 'custom_colors',
+      'settings' => 'custom_body-color'
+    )
+  ) );
   // Color primary
   $wp_customize->add_setting( 'custom_primary-color' );
   $wp_customize->add_control( new WP_Customize_Color_Control(
@@ -301,6 +312,7 @@ function generate_theme_option_css() {
   $fontFamily = get_theme_mod( 'custom_font' );
   $fontBody = get_theme_mod( 'custom_font-body' );
   $fontHeadings = get_theme_mod( 'custom_font-headings' );
+  $colorBody = get_theme_mod( 'custom_body-color' );
   $colorPrimary = get_theme_mod( 'custom_primary-color' );
   $colorSecondary = get_theme_mod( 'custom_secondary-color' );
   $colorTertiary = get_theme_mod( 'custom_tertiary-color' );
@@ -322,6 +334,8 @@ font-family: <?php echo $fontHeadings;
 ?>
 }
 :root {
+--color-body: <?php echo $colorBody;
+?>;
 --color-primary: <?php echo $colorPrimary;
 ?>;
 --color-secondary: <?php echo $colorSecondary;

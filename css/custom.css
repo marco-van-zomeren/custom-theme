@@ -187,6 +187,7 @@ a[x-apple-data-detectors] {
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
+  --color-body: $gray-900;
   --text-black: #000;
   --text-white: #fff;
   --bs-gray-100: #f8f9fa;
@@ -222,7 +223,7 @@ a[x-apple-data-detectors] {
   --text-link: var(--color-link);
   --bs-font-sans-serif: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --color-btn-primary: #000;
   --spacer: 20px; }
   :root .container {
     --bs-gutter-x: 40px; }
@@ -230,6 +231,7 @@ a[x-apple-data-detectors] {
     --bs-gutter-x: 20px; }
 
 body {
+  color: var(--color-body);
   background-color: --footer-background-color; }
 
 *,
@@ -243,7 +245,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.618;
-  color: #212529;
+  color: var(--color-body);
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -2609,7 +2611,7 @@ article table {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: var(--color-body);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -2641,7 +2643,7 @@ article table {
   .woocommerce button.button:hover,
   .woocommerce input.button:hover,
   #eu-cookie-law.negative input[type=submit]:hover {
-    color: #212529; }
+    color: var(--color-body); }
   .btn-check:focus + .btn, .sensei .btn-check:focus + input[type=submit],
   .sensei .btn-check:focus + a.button.send-message-button,
   .sensei .lesson .btn-check:focus + input.quiz-submit.complete, .sensei .quiz .btn-check:focus + input.quiz-submit.complete, .woocommerce #respond .btn-check:focus + input#submit,
@@ -6645,7 +6647,7 @@ input[type="password"],
   color: #fff !important; }
 
 .text-body {
-  color: #212529 !important; }
+  color: var(--color-body) !important; }
 
 .text-muted {
   color: #6c757d !important; }
@@ -6946,7 +6948,7 @@ input[type="password"],
 .bottom-100 {
   bottom: 100px !important; }
 
-.bottom-50\% {
+.bottom-1-2 {
   bottom: 50% !important; }
 
 .row-gap {
@@ -7182,7 +7184,7 @@ input[type="password"],
 .left-100 {
   left: 100px !important; }
 
-.left-50\% {
+.left-1-2 {
   left: 50% !important; }
 
 .object-fit-fill {
@@ -7275,7 +7277,7 @@ input[type="password"],
 .right-100 {
   right: 100px !important; }
 
-.right-50\% {
+.right-1-2 {
   right: 50% !important; }
 
 .span-1 {
@@ -7389,7 +7391,7 @@ input[type="password"],
 .top-100 {
   top: 100px !important; }
 
-.top-50\% {
+.top-1-2 {
   top: 50% !important; }
 
 .transform-none {
@@ -8438,7 +8440,7 @@ input[type="password"],
     color: #fff !important; }
 
   .text-sm-body {
-    color: #212529 !important; }
+    color: var(--color-body) !important; }
 
   .text-sm-muted {
     color: #6c757d !important; }
@@ -8626,7 +8628,7 @@ input[type="password"],
   .bottom-sm-100 {
     bottom: 100px !important; }
 
-  .bottom-sm-50\% {
+  .bottom-sm-1-2 {
     bottom: 50% !important; }
 
   .gcs-sm-1 {
@@ -8818,7 +8820,7 @@ input[type="password"],
   .left-sm-100 {
     left: 100px !important; }
 
-  .left-sm-50\% {
+  .left-sm-1-2 {
     left: 50% !important; }
 
   .right-sm-n5 {
@@ -8896,7 +8898,7 @@ input[type="password"],
   .right-sm-100 {
     right: 100px !important; }
 
-  .right-sm-50\% {
+  .right-sm-1-2 {
     right: 50% !important; }
 
   .span-sm-1 {
@@ -9010,7 +9012,7 @@ input[type="password"],
   .top-sm-100 {
     top: 100px !important; }
 
-  .top-sm-50\% {
+  .top-sm-1-2 {
     top: 50% !important; }
 
   .z-sm-0 {
@@ -10049,7 +10051,7 @@ input[type="password"],
     color: #fff !important; }
 
   .text-md-body {
-    color: #212529 !important; }
+    color: var(--color-body) !important; }
 
   .text-md-muted {
     color: #6c757d !important; }
@@ -10237,7 +10239,7 @@ input[type="password"],
   .bottom-md-100 {
     bottom: 100px !important; }
 
-  .bottom-md-50\% {
+  .bottom-md-1-2 {
     bottom: 50% !important; }
 
   .gcs-md-1 {
@@ -10429,7 +10431,7 @@ input[type="password"],
   .left-md-100 {
     left: 100px !important; }
 
-  .left-md-50\% {
+  .left-md-1-2 {
     left: 50% !important; }
 
   .right-md-n5 {
@@ -10507,7 +10509,7 @@ input[type="password"],
   .right-md-100 {
     right: 100px !important; }
 
-  .right-md-50\% {
+  .right-md-1-2 {
     right: 50% !important; }
 
   .span-md-1 {
@@ -10621,7 +10623,7 @@ input[type="password"],
   .top-md-100 {
     top: 100px !important; }
 
-  .top-md-50\% {
+  .top-md-1-2 {
     top: 50% !important; }
 
   .z-md-0 {
@@ -11660,7 +11662,7 @@ input[type="password"],
     color: #fff !important; }
 
   .text-lg-body {
-    color: #212529 !important; }
+    color: var(--color-body) !important; }
 
   .text-lg-muted {
     color: #6c757d !important; }
@@ -11848,7 +11850,7 @@ input[type="password"],
   .bottom-lg-100 {
     bottom: 100px !important; }
 
-  .bottom-lg-50\% {
+  .bottom-lg-1-2 {
     bottom: 50% !important; }
 
   .gcs-lg-1 {
@@ -12040,7 +12042,7 @@ input[type="password"],
   .left-lg-100 {
     left: 100px !important; }
 
-  .left-lg-50\% {
+  .left-lg-1-2 {
     left: 50% !important; }
 
   .right-lg-n5 {
@@ -12118,7 +12120,7 @@ input[type="password"],
   .right-lg-100 {
     right: 100px !important; }
 
-  .right-lg-50\% {
+  .right-lg-1-2 {
     right: 50% !important; }
 
   .span-lg-1 {
@@ -12232,7 +12234,7 @@ input[type="password"],
   .top-lg-100 {
     top: 100px !important; }
 
-  .top-lg-50\% {
+  .top-lg-1-2 {
     top: 50% !important; }
 
   .z-lg-0 {
@@ -13271,7 +13273,7 @@ input[type="password"],
     color: #fff !important; }
 
   .text-xl-body {
-    color: #212529 !important; }
+    color: var(--color-body) !important; }
 
   .text-xl-muted {
     color: #6c757d !important; }
@@ -13459,7 +13461,7 @@ input[type="password"],
   .bottom-xl-100 {
     bottom: 100px !important; }
 
-  .bottom-xl-50\% {
+  .bottom-xl-1-2 {
     bottom: 50% !important; }
 
   .gcs-xl-1 {
@@ -13651,7 +13653,7 @@ input[type="password"],
   .left-xl-100 {
     left: 100px !important; }
 
-  .left-xl-50\% {
+  .left-xl-1-2 {
     left: 50% !important; }
 
   .right-xl-n5 {
@@ -13729,7 +13731,7 @@ input[type="password"],
   .right-xl-100 {
     right: 100px !important; }
 
-  .right-xl-50\% {
+  .right-xl-1-2 {
     right: 50% !important; }
 
   .span-xl-1 {
@@ -13843,7 +13845,7 @@ input[type="password"],
   .top-xl-100 {
     top: 100px !important; }
 
-  .top-xl-50\% {
+  .top-xl-1-2 {
     top: 50% !important; }
 
   .z-xl-0 {
@@ -14882,7 +14884,7 @@ input[type="password"],
     color: #fff !important; }
 
   .text-xxl-body {
-    color: #212529 !important; }
+    color: var(--color-body) !important; }
 
   .text-xxl-muted {
     color: #6c757d !important; }
@@ -15070,7 +15072,7 @@ input[type="password"],
   .bottom-xxl-100 {
     bottom: 100px !important; }
 
-  .bottom-xxl-50\% {
+  .bottom-xxl-1-2 {
     bottom: 50% !important; }
 
   .gcs-xxl-1 {
@@ -15262,7 +15264,7 @@ input[type="password"],
   .left-xxl-100 {
     left: 100px !important; }
 
-  .left-xxl-50\% {
+  .left-xxl-1-2 {
     left: 50% !important; }
 
   .right-xxl-n5 {
@@ -15340,7 +15342,7 @@ input[type="password"],
   .right-xxl-100 {
     right: 100px !important; }
 
-  .right-xxl-50\% {
+  .right-xxl-1-2 {
     right: 50% !important; }
 
   .span-xxl-1 {
@@ -15454,7 +15456,7 @@ input[type="password"],
   .top-xxl-100 {
     top: 100px !important; }
 
-  .top-xxl-50\% {
+  .top-xxl-1-2 {
     top: 50% !important; }
 
   .z-xxl-0 {
@@ -18101,6 +18103,9 @@ a.woocommerce .woocommerce-checkout #payment {
   padding: 0;
   margin: 0 0 20px !important; }
 
+.woocommerce .woocommerce-Price-amount {
+  color: var(--color-body); }
+
 .col2-set .col-1,
 .col2-set .col-2 {
   width: 100% !important; }
@@ -18112,6 +18117,11 @@ a.woocommerce .woocommerce-checkout #payment {
   height: 20px !important;
   width: 20px !important;
   margin-right: 5px !important; }
+.woocommerce .quantity .qty {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 !important;
+  padding: 0 !important; }
 .woocommerce form .show-password-input, .woocommerce .woocommerce-page form .show-password-input {
   top: 0 !important;
   right: 0 !important; }

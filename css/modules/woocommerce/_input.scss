@@ -1,4 +1,5 @@
 .woocommerce {
+	// Checkbox
 	.woocommerce-form__input-checkbox {
 		-webkit-appearance: checkbox!important;
 		box-shadow: none!important;
@@ -7,7 +8,14 @@
 		width: 20px!important;
 		margin-right: 5px!important;
 	}
-
+	// Quantity
+	.quantity .qty {
+    height: 50px;
+    line-height: 50px;
+    margin: 0!important;
+    padding: 0!important;
+	}
+	// Password
 	form .show-password-input, .woocommerce-page form .show-password-input {
 		top:0!important;
 		right:0!important;
