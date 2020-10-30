@@ -9,10 +9,7 @@ a.remove:hover,
 }
 
 // GRID
-.col2-set .col-1,
-.col2-set .col-2 {
-    width: 100% !important;
-}
+@import "grid";
 	
 // INPUT
 .woocommerce-form__input-checkbox {
@@ -29,6 +26,9 @@ form .show-password-input, .woocommerce-page form .show-password-input {
 	right:0!important;
 }
 
+#reviews #comment {
+	height: auto!important;
+}
 // SHOP PAGE
 ul.products li.product .woocommerce-loop-product__title {
     min-height: 85px;

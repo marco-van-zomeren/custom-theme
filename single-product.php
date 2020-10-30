@@ -1,5 +1,5 @@
 <?php get_header();?>
-<main class="bg-white p-20">
+<main class="bg-white">
   <?php
   /* Start the Loop */
   while ( have_posts() ): the_post();
@@ -8,6 +8,6 @@
   ?>
 </main>
 <section class="text-center p-20">
-  <?php include("share-page-horizontal.php"); ?>
+  <?php get_template_part( 'template-parts/share/share','page-horizontal'); ?>
 </section>
 <?php get_footer(); ?>

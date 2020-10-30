@@ -5806,6 +5806,9 @@ body {
 .h-500 {
   height: 500px !important; }
 
+.h-600 {
+  height: 600px !important; }
+
 .h-1-4 {
   height: 25% !important; }
 
@@ -7615,6 +7618,9 @@ input[type="password"],
   .h-sm-500 {
     height: 500px !important; }
 
+  .h-sm-600 {
+    height: 600px !important; }
+
   .h-sm-1-4 {
     height: 25% !important; }
 
@@ -9222,6 +9228,9 @@ input[type="password"],
 
   .h-md-500 {
     height: 500px !important; }
+
+  .h-md-600 {
+    height: 600px !important; }
 
   .h-md-1-4 {
     height: 25% !important; }
@@ -10831,6 +10840,9 @@ input[type="password"],
   .h-lg-500 {
     height: 500px !important; }
 
+  .h-lg-600 {
+    height: 600px !important; }
+
   .h-lg-1-4 {
     height: 25% !important; }
 
@@ -12439,6 +12451,9 @@ input[type="password"],
   .h-xl-500 {
     height: 500px !important; }
 
+  .h-xl-600 {
+    height: 600px !important; }
+
   .h-xl-1-4 {
     height: 25% !important; }
 
@@ -14046,6 +14061,9 @@ input[type="password"],
 
   .h-xxl-500 {
     height: 500px !important; }
+
+  .h-xxl-600 {
+    height: 600px !important; }
 
   .h-xxl-1-4 {
     height: 25% !important; }
@@ -17777,7 +17795,7 @@ audio {
     cursor: pointer;
     position: relative; }
     .green-audio-player .slider .gap-progress {
-      background-color: var(--text-link);
+      background-color: var(--bs-gray-500);
       border-radius: inherit;
       position: absolute;
       pointer-events: none; }
@@ -17785,7 +17803,7 @@ audio {
         height: 10px;
         width: 10px;
         border-radius: 100%;
-        background-color: var(--text-link);
+        background-color: var(--bs-gray-500);
         position: absolute;
         pointer-events: all; }
         .green-audio-player .slider .gap-progress .pin::after {
@@ -17827,7 +17845,7 @@ audio {
     .green-audio-player .volume .volume__button {
       cursor: pointer; }
       .green-audio-player .volume .volume__button.open path {
-        fill: var(--text-link); }
+        fill: var(--bs-gray-500); }
     .green-audio-player .volume .volume__controls {
       width: 30px;
       height: 135px;
@@ -18041,6 +18059,8 @@ img + .audio .player {
   .woocommerce form .show-password-input, .woocommerce .woocommerce-page form .show-password-input {
     top: 0 !important;
     right: 0 !important; }
+  .woocommerce #reviews #comment {
+    height: auto !important; }
   .woocommerce ul.products li.product .woocommerce-loop-product__title {
     min-height: 85px; }
   .woocommerce #content div.product div.summary,

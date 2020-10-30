@@ -11,6 +11,9 @@ function woo_remove_product_tabs( $tabs ) {
 }
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 
+// Remove single product title 
+remove_action( 'woocommerce_single_product_summary','woocommerce_template_single_title', 5 );
+
 // Remove related products output
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
@@ -35,39 +38,6 @@ remove_action( 'woocommerce_single_product_summary',
                'woocommerce_template_single_add_to_cart', 30 );
     add_action( 'woocommerce_single_product_summary', 
             'woocommerce_template_single_add_to_cart', 9 );
-
-// Remove fields from account
-add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
-add_filter( 'woocommerce_billing_fields' , 'custom_override_billing_fields' );
-add_filter( 'woocommerce_shipping_fields' , 'custom_override_shipping_fields' );
-
-function custom_override_checkout_fields( $fields ) {
-	unset( $fields['billing']['billing_address_1'] );
- 	unset( $fields['billing']['billing_address_2'] );
-	unset( $fields['billing']['billing_city'] );	
-	unset( $fields['billing']['billing_company'] );
-  	unset( $fields['billing']['billing_country']);
-  	unset( $fields['shipping']['shipping_country']);
-	unset( $fields['billing']['billing_postcode'] );
-	unset( $fields['billing']['billing_state'] );
-	unset( $fields['billing']['billing_phone'] );
-  return $fields;
-}
-
-function custom_override_billing_fields( $fields ) {
-  unset( $fields['billing_address_1'] );
-  unset( $fields['billing_address_2'] );	
-  unset( $fields['billing_city'] );	
-  unset( $fields['billing_company'] );
-  unset( $fields['billing_country']);
-  unset( $fields['billing_postcode'] );	
-  return $fields;
-}
-
-function custom_override_shipping_fields( $fields ) {
-  unset( $fields['shipping_country']);
-  return $fields;
-}
 
 // Hide cart when empty
 add_action( 'wp_footer', function() {    

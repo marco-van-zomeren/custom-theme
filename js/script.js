@@ -4,39 +4,39 @@ jQuery('.js__tabs ul.tabs__list li').clone().appendTo(".list__clone");
 jQuery(window).on("load resize ", function () {
     jQuery('.js__tabs ul.tabs__list li').each(function () {
 
-        var tabsTotalWidth = $("ul.tabs__list").width();
+        var tabsTotalWidth = jQuery("ul.tabs__list").width();
 
-        if ($(this).position().left + $(this).outerWidth() + 65 > tabsTotalWidth) {
-            $(this).addClass("hide");
-            $(".list__clone li").eq($(this).index()).addClass("show");
+        if (jQuery(this).position().left + jQuery(this).outerWidth() + 65 > tabsTotalWidth) {
+            jQuery(this).addClass("hide");
+            jQuery(".list__clone li").eq(jQuery(this).index()).addClass("show");
         }
-        if ($(this).position().left + $(this).outerWidth() + 65 < tabsTotalWidth) {
-            $(this).removeClass("hide");
-            $(".list__clone li").eq($(this).index()).removeClass("show");
+        if (jQuery(this).position().left + jQuery(this).outerWidth() + 65 < tabsTotalWidth) {
+            jQuery(this).removeClass("hide");
+            jQuery(".list__clone li").eq(jQuery(this).index()).removeClass("show");
         }
 
-        var tabsWithClassHide = $('.tabs__list .hide').length
+        var tabsWithClassHide = jQuery('.tabs__list .hide').length
 
         if (tabsWithClassHide > 0) {
-            $(".tabs__toggle").css("opacity", "1");
-            $(".tabs__toggle").addClass("show");
+            jQuery(".tabs__toggle").css("opacity", "1");
+            jQuery(".tabs__toggle").addClass("show");
         }
         if (tabsWithClassHide === 0) {
-            $(".tabs__toggle").css("opacity", "0");
-            $(".tabs__toggle").removeClass("show");
+            jQuery(".tabs__toggle").css("opacity", "0");
+            jQuery(".tabs__toggle").removeClass("show");
         }
 
         var togglePosition = 0;
-        $(".tabs__list li:not(.hide)").each(function () {
-            togglePosition += $(this).outerWidth(true);
+        jQuery(".tabs__list li:not(.hide)").each(function () {
+            togglePosition += jQuery(this).outerWidth(true);
         });
 
-        $(".tabs__toggle-container").css("left", togglePosition + 65);
+        jQuery(".tabs__toggle-container").css("left", togglePosition + 65);
        
-        var tabs__toggleWidth = $(".tabs__toggle").outerWidth();
+        var tabs__toggleWidth = jQuery(".tabs__toggle").outerWidth();
 
-        var menuPosition = $(window).width() - tabs__toggleWidth - togglePosition - tabs__toggleWidth - 21;
-        $(".tabs__more__list").css("right", menuPosition);
+        var menuPosition = jQuery(window).width() - tabs__toggleWidth - togglePosition - tabs__toggleWidth - 21;
+        jQuery(".tabs__more__list").css("right", menuPosition);
 		
     });
 });
