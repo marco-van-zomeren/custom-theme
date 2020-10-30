@@ -3,7 +3,7 @@
   <div class="container py-20">
     <header class="row text-center">
       <h1 class="animate__fadeInUp js__fx">
-        <?php single_post_title(); ?>
+        <?php single_post_title(); ?> 
       </h1>
     </header>
     <section class="pb-20 position-relative z-1 animate__fadeInUp delay-2 js__fx">

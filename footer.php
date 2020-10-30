@@ -1,3 +1,13 @@
+<!-- SEARCH -->
+<section class="bg-white position-fixed top-0 left-0 w-1-1 h-1-1 justify-content-center z-6 collapse" id="search-form">
+  <div class="container">
+    <div class="mt-20">
+      <?php get_template_part( 'template-parts/nav/nav', 'search-form' ); ?>
+    </div>
+  </div>
+</section>
+<!-- -->
+
 <footer class="pt-20 pt-md-40 px-0 px-md-40">
   <div class="container">
     <div class="row"> 
@@ -9,8 +19,7 @@
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-1' ] );
           echo $menu->name;
           ?>
-          </span>
-		  </p>
+          </span> </p>
         <?php
         wp_nav_menu( array(
           'theme_location' => 'footer-menu-1',
@@ -30,8 +39,7 @@
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-2' ] );
           echo $menu->name;
           ?>
-          </span>
-		  </p>
+          </span> </p>
         <?php
         wp_nav_menu( array(
           'theme_location' => 'footer-menu-2',
@@ -51,8 +59,7 @@
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-3' ] );
           echo $menu->name;
           ?>
-          </span>
-		  </p>
+          </span> </p>
         <?php
         wp_nav_menu( array(
           'theme_location' => 'footer-menu-3',
@@ -72,8 +79,7 @@
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-4' ] );
           echo $menu->name;
           ?>
-          </span>
-		  </p>
+          </span> </p>
         <?php
         wp_nav_menu( array(
           'theme_location' => 'footer-menu-4',
@@ -114,5 +120,4 @@
 	  });
 	});
 </script>
-</body>
-</html>
+</body></html>

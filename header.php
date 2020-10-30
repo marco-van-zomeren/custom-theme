@@ -11,13 +11,13 @@
 <body <?php body_class( '' ); ?> ontouchstart="">
 
 <!-- NAV LAYOUT -->
-  <?php
-  if ( get_theme_mod( 'custom_nav-layout', 'default' ) == 'default' ):
-    get_template_part( 'template-parts/nav/nav', 'default' );
-  elseif ( get_theme_mod( 'custom_nav-layout', 'position-absolute' ) == 'position-absolute' ):
-    get_template_part( 'template-parts/nav/nav', 'position-absolute' );
-  elseif ( get_theme_mod( 'custom_nav-layout', 'logo-center' ) == 'logo-center' ):
-    get_template_part( 'template-parts/nav/nav', 'logo-center' );
-  endif ?>
-<!-- --> 
+<?php
+if ( get_theme_mod( 'custom_nav-layout', 'default' ) == 'default' ):
+  get_template_part( 'template-parts/nav/nav', 'default' );
+elseif ( get_theme_mod( 'custom_nav-layout', 'position-absolute' ) == 'position-absolute' ):
+  get_template_part( 'template-parts/nav/nav', 'position-absolute' );
+elseif ( get_theme_mod( 'custom_nav-layout', 'logo-center' ) == 'logo-center' ):
+  get_template_part( 'template-parts/nav/nav', 'logo-center' );
+endif ?>
+<!-- -->
 

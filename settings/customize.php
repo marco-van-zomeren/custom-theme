@@ -216,6 +216,24 @@ function custom_customizer( $wp_customize ) {
     )
   );
 
+  // Search icon
+  $wp_customize->add_setting( 'custom_nav-layout_search-icon', array(
+    'default' => 1,
+    'sanitize_callback' => 'esc_attr', // Sanitize input
+  ) );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      'custom_nav-layout_search-icon',
+      array(
+        'label' => __( 'Display search icon', 'custom-theme' ),
+        'section' => 'custom_nav-layout',
+        'settings' => 'custom_nav-layout_search-icon',
+        'type' => 'checkbox',
+      )
+    )
+  );
+
   // Account icon
   $wp_customize->add_setting( 'custom_nav-layout_account-icon', array(
     'default' => 1,

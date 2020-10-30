@@ -27,7 +27,15 @@
           <!-- MENU -->
           <?php get_template_part( 'template-parts/nav/nav', 'menu' ); ?>
           <!-- --> 
-          <!-- ACCOUNT -->
+			
+          <!-- SEARCH -->
+          <?php
+          if ( get_theme_mod( 'custom_nav-layout_search-icon' ) == 1 ) {
+            get_template_part( 'template-parts/nav/nav', 'search-icon' );
+          }
+          ?>
+          <!-- --> 
+		  <!-- ACCOUNT -->
           <?php
           if ( get_theme_mod( 'custom_nav-layout_account-icon' ) == 1 ) {
             get_template_part( 'template-parts/nav/nav', 'account-icon' );
