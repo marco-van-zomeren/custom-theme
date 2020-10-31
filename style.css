@@ -18051,10 +18051,10 @@ img + .audio .player {
     position: relative !important;
     right: 0 !important;
     bottom: 0 !important; } }
-a.woocommerce a.remove:hover,
-a.woocommerce #add_payment_method #payment,
-a.woocommerce .woocommerce-cart #payment,
-a.woocommerce .woocommerce-checkout #payment {
+.woocommerce a.remove:hover,
+.woocommerce #add_payment_method #payment,
+.woocommerce .woocommerce-cart #payment,
+.woocommerce .woocommerce-checkout #payment {
   background: transparent; }
 
 .woocommerce a.remove {

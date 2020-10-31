@@ -5360,6 +5360,9 @@ body {
 @media (min-width: 768px) {
   .collapse.d-md-block {
     display: block; } }
+.clear-both {
+  clear: both; }
+
 .align-baseline {
   vertical-align: baseline !important; }
 
@@ -6189,7 +6192,7 @@ body {
 .mb-10 {
   margin-bottom: 10px !important; }
 
-.mb-20 {
+.mb-20, .c\:mb-20 > * {
   margin-bottom: 20px !important; }
 
 .mb-30 {
@@ -18044,10 +18047,10 @@ img + .audio .player {
     position: relative !important;
     right: 0 !important;
     bottom: 0 !important; } }
-a.woocommerce a.remove:hover,
-a.woocommerce #add_payment_method #payment,
-a.woocommerce .woocommerce-cart #payment,
-a.woocommerce .woocommerce-checkout #payment {
+.woocommerce a.remove:hover,
+.woocommerce #add_payment_method #payment,
+.woocommerce .woocommerce-cart #payment,
+.woocommerce .woocommerce-checkout #payment {
   background: transparent; }
 
 .woocommerce a.remove {

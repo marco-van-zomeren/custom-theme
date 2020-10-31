@@ -1,4 +1,4 @@
-<a class="d-block border border-hsl-black py-5 px-20 bw-2 rounded-pill d-lg-none mb-10 d-inline-block float-left text-black" data-toggle="collapse" href="#categories" role="button" aria-expanded="false" aria-controls="collapse"><i class="fas fa-bars"></i></a>
+<a class="d-block border border-hsl-black py-5 px-20 bw-2 rounded-pill d-lg-none mb-10 d-inline-block float-left text-black" data-toggle="collapse" href="#categories" role="button" aria-expanded="false" aria-controls="collapse">Categories</a>
 
 <ul class="nav-documentation d-lg-block p-0 m-0 text-left collapse clear-both" id="categories">
   <?php $documentationCategory = get_theme_mod( 'custom_documentation-category' ); ?>

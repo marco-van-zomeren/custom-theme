@@ -2,7 +2,7 @@
 <section class="row">
 <div class="col-12 col-lg-2"> 
   <!-- TOGGLE --> 
-  <a class="d-block border border-hsl-black py-5 px-20 bw-2 rounded-pill d-lg-none mb-10 d-inline-block float-left text-black" data-toggle="collapse" href="#sidebar" role="button" aria-expanded="false" aria-controls="collapse"><i class="fas fa-bars"></i></a> 
+  <a class="d-block border border-hsl-black py-5 px-20 bw-2 rounded-pill d-lg-none mb-10 d-inline-block float-left text-black" data-toggle="collapse" href="#sidebar" role="button" aria-expanded="false" aria-controls="collapse">Filter</a> 
   <!-- --> 
   <!-- SIDEBAR -->
   <ul class="clear-both d-lg-block collapse c:mb-20" id="sidebar">
