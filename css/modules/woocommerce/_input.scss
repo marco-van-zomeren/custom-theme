@@ -8,6 +8,21 @@
 		width: 20px!important;
 		margin-right: 5px!important;
 	}
+	// Checkout
+	form.checkout_coupon, form.login, form.register {
+		padding: 0!important;
+		border: 0!important;
+	}
+	// Password
+	form .show-password-input, .woocommerce-page form .show-password-input {
+		top:0!important;
+		right:0!important;
+	}
+	// Select2
+	input.select2-search__field {
+		padding: 0!important;
+		float: none!important;
+	}
 	// Quantity
 	.quantity .qty {
     height: 50px;
@@ -15,18 +30,8 @@
     margin: 0!important;
     padding: 0!important;
 	}
-	// Password
-	form .show-password-input, .woocommerce-page form .show-password-input {
-		top:0!important;
-		right:0!important;
-	}
-
+	// Review
 	#reviews #comment {
 		height: auto!important;
-	}
-
-	form.checkout_coupon, form.login, form.register {
-		padding: 0!important;
-		border: 0!important;
 	}
 }
