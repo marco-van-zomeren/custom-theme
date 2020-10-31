@@ -1,7 +1,7 @@
 <form action="/" method="get" class="d-table w-1-1">
 	<div class="d-table-cell align-middle pr-20">
 		<label for="search">Search</label>
-		<input type="text" name="s" id="search" placeholder="Hey, tell me what you are looking for :)" value="<?php the_search_query(); ?>" />
+		<input type="text" name="s" id="search" placeholder="What are you looking for? :)" value="<?php the_search_query(); ?>" />
 	</div>
 	<div class="d-table-cell align-middle w-50 lh-50">
 		<a href="" class="d-block w-50 lh-50 text-center text-black hover:text-tertiary position-relative top-10 " data-toggle="collapse" data-target="#search-form" aria-expanded="false" aria-controls="collapse">

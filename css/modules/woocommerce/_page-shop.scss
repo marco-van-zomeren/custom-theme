@@ -1,0 +1,13 @@
+.woocommerce {
+	// Price slider
+	.price_slider_wrapper {
+		.widget_price_filter .ui-slider .ui-slider-range {
+			background-color: var(--color-body);
+		}	
+	}
+	.price_label {
+		clear: both;
+		display: block;
+		width: 100%;
+	}
+}

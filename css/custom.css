@@ -18151,6 +18151,13 @@ ul.products {
 .woocommerce-Reviews input {
   margin-bottom: var(--spacer); }
 
+.woocommerce .price_slider_wrapper .widget_price_filter .ui-slider .ui-slider-range {
+  background-color: var(--color-body); }
+.woocommerce .price_label {
+  clear: both;
+  display: block;
+  width: 100%; }
+
 .woocommerce .swiper-container {
   width: 100%;
   margin-left: auto;
