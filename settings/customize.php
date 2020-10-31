@@ -54,7 +54,6 @@ function custom_customizer( $wp_customize ) {
       )
     )
   );
-
   // Colors
   $wp_customize->add_section( 'custom_colors', array(
     'title' => __( 'Colors', 'custom-theme' ),
@@ -71,6 +70,39 @@ function custom_customizer( $wp_customize ) {
       'settings' => 'custom_body-color'
     )
   ) );
+  // Color link
+  $wp_customize->add_setting( 'custom_link-color' );
+  $wp_customize->add_control( new WP_Customize_Color_Control(
+    $wp_customize,
+    'custom_link-color',
+    array(
+      'label' => __( 'Link color', 'custom-theme' ),
+      'section' => 'custom_colors',
+      'settings' => 'custom_link-color'
+    )
+  ) );
+  // Color highlight
+  $wp_customize->add_setting( 'custom_highlight-color' );
+  $wp_customize->add_control( new WP_Customize_Color_Control(
+    $wp_customize,
+    'custom_highlight-color',
+    array(
+      'label' => __( 'Highlight color', 'custom-theme' ),
+      'section' => 'custom_colors',
+      'settings' => 'custom_highlight-color'
+    )
+  ) );
+  // Color primary button
+  $wp_customize->add_setting( 'custom_primary-button-color' );
+  $wp_customize->add_control( new WP_Customize_Color_Control(
+    $wp_customize,
+    'custom_primary-button-color',
+    array(
+      'label' => __( 'Primary button color', 'custom-theme' ),
+      'section' => 'custom_colors',
+      'settings' => 'custom_primary-button-color'
+    )
+  ) );	
   // Color primary
   $wp_customize->add_setting( 'custom_primary-color' );
   $wp_customize->add_control( new WP_Customize_Color_Control(
@@ -104,17 +136,6 @@ function custom_customizer( $wp_customize ) {
       'settings' => 'custom_tertiary-color'
     )
   ) );
-  // Color link
-  $wp_customize->add_setting( 'custom_link-color' );
-  $wp_customize->add_control( new WP_Customize_Color_Control(
-    $wp_customize,
-    'custom_link-color',
-    array(
-      'label' => __( 'Link color', 'custom-theme' ),
-      'section' => 'custom_colors',
-      'settings' => 'custom_link-color'
-    )
-  ) );
   // Color nav text
   $wp_customize->add_setting( 'custom_nav-text-color' );
   $wp_customize->add_control( new WP_Customize_Color_Control(
@@ -135,17 +156,6 @@ function custom_customizer( $wp_customize ) {
       'label' => __( 'Nav text :hover color', 'custom-theme' ),
       'section' => 'custom_colors',
       'settings' => 'custom_nav-hover-color'
-    )
-  ) );
-  // Color primary button
-  $wp_customize->add_setting( 'custom_primary-button-color' );
-  $wp_customize->add_control( new WP_Customize_Color_Control(
-    $wp_customize,
-    'custom_primary-button-color',
-    array(
-      'label' => __( 'Primary button color', 'custom-theme' ),
-      'section' => 'custom_colors',
-      'settings' => 'custom_primary-button-color'
     )
   ) );
   // Color footer background
@@ -313,13 +323,14 @@ function generate_theme_option_css() {
   $fontBody = get_theme_mod( 'custom_font-body' );
   $fontHeadings = get_theme_mod( 'custom_font-headings' );
   $colorBody = get_theme_mod( 'custom_body-color' );
+  $colorLink = get_theme_mod( 'custom_link-color' );
+  $colorHighlight = get_theme_mod( 'custom_highlight-color' );
+  $colorButtonPrimary = get_theme_mod( 'custom_primary-button-color' );
   $colorPrimary = get_theme_mod( 'custom_primary-color' );
   $colorSecondary = get_theme_mod( 'custom_secondary-color' );
   $colorTertiary = get_theme_mod( 'custom_tertiary-color' );
-  $colorLink = get_theme_mod( 'custom_link-color' );
   $navTextColor = get_theme_mod( 'custom_nav-text-color' );
   $navHoverColor = get_theme_mod( 'custom_nav-hover-color' );
-  $colorButtonPrimary = get_theme_mod( 'custom_primary-button-color' );
   $footerBackgroundColor = get_theme_mod( 'custom_footer-background-color' );
   $footerTextColor = get_theme_mod( 'custom_footer-text-color' );
   ?>
@@ -336,19 +347,21 @@ font-family: <?php echo $fontHeadings;
 :root {
 --color-body: <?php echo $colorBody;
 ?>;
+--color-link: <?php echo $colorLink;
+?>;
+--color-highlight: <?php echo $colorHighlight;
+?>;
+--color-btn-primary: <?php echo $colorButtonPrimary;
+?>;
 --color-primary: <?php echo $colorPrimary;
 ?>;
 --color-secondary: <?php echo $colorSecondary;
 ?>;
 --color-tertiary: <?php echo $colorTertiary;
 ?>;
---color-link: <?php echo $colorLink;
-?>;
 --nav-text-color: <?php echo $navTextColor;
 ?>;
 --nav-hover-color: <?php echo $navHoverColor;
-?>;
---color-btn-primary: <?php echo $colorButtonPrimary;
 ?>;
 --footer-background-color: <?php echo $footerBackgroundColor;
 ?>;
