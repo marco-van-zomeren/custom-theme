@@ -16326,6 +16326,15 @@ button.btn_toggle-menu[aria-expanded="true"] .btn_toggle-menu__inner {
     transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
     transform: translate3d(0, 10px, 0) rotate(-45deg); }
 
+.fa-chevron-down {
+  transition: all 0.2s; }
+
+*[aria-expanded="true"] > i.fa-chevron-down {
+  transform: rotate(180deg); }
+
+button.current {
+  background: var(--bs-gray-200) !important; }
+
 .read-more,
 a[rel~="next"],
 a[rel~="prev"] {

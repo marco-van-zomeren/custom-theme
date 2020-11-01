@@ -7,7 +7,7 @@
 
     while ( $loop->have_posts() ): $loop->the_post();
 
-    get_template_part( 'template-parts/content/content', 'excerpt_product' );
+    get_template_part( 'template-parts/content/content', 'excerpt-product' );
 
     endwhile;
     ?>
