@@ -1,13 +1,15 @@
 <?php get_header();?>
-<main class="bg-white p-20">
+<main class="bg-white pb-20 px-lg-20">
   <div class="container">
     <header class="row text-center">
       <h1>
         <?php single_term_title(); ?>
       </h1>
     </header>
-    <section class="row text-center">
-      <div class="button-group filters-button-group">
+    <section class="row"> 
+	  <a class="d-block p-0 mb-10 ml-10 float-left w-auto text-black" data-toggle="collapse" href="#categories" role="button" aria-expanded="false" aria-controls="collapse"><i class="fas fa-chevron-down"></i> Categories</a>
+		
+      <div class="button-group filters-button-group postion-relative ml-n5 clear-both collapse" id="categories">
         <?php
         $terms = get_terms( 'jetpack-portfolio-type', array(
           'hide_empty' => false

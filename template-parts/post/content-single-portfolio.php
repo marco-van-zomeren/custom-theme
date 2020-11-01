@@ -12,7 +12,6 @@
       <?php echo $image_l[0]; ?> 1024w,
       <?php echo $image_xl[0]; ?> 1440w,
       <?php echo $image_xxl[0]; ?> 2500w" class="object-fit-cover">
-  <div class="position-absolute top-0 right-0 bottom-0 left-0 w-1-1 h-100% bg-black-50"></div>
 </section>
 <?php endif; ?>
 <section class="bg-white py-20">

@@ -12,9 +12,10 @@
           <p class="mb-20 text-gray-600 animate__fadeInUp delay-2 js__fx">
             <?php block_field( 'intro' ); ?>
           </p>
-          <a href="<?php block_field( 'ctaurl' ); ?>" class="btn border bw-2 border-tertiary text-uppercase text-tertiary hover:text-white hover:bg-tertiary rounded-pill mb-20 mb-md-0 animate__fadeInUp delay-3 js__fx">
+          <a href="<?php block_field( 'ctaurl' ); ?>" class="btn border bw-2 border-tertiary text-uppercase text-tertiary hover:text-white hover:bg-tertiary rounded-pill mb-20 mb-lg-0 animate__fadeInUp delay-3 js__fx">
           <?php block_field( 'ctatext' ); ?>
-          </a> </div>
+          </a> 
+		  </div>
       </div>
       
       <!-- SWIPER -->
