@@ -1,0 +1,15 @@
+@include media-breakpoint-up(md) {
+	.hover\:box-shadow-border-n5:hover,
+	.c\:hover\:box-shadow-border-n5 > a {
+		@include box-shadow(inset 0 0 0 0 var(--text-black));
+		transition: all 0.2s;
+		&[aria-current="page"]{
+			@include box-shadow(inset 0 -5px 0 0 var(--text-black));
+		}
+	}
+	
+	.hover\:box-shadow-border-n5:hover,
+	.c\:hover\:box-shadow-border-n5 > a:hover {
+		@include box-shadow(inset 0 -5px 0 0 var(--text-black));
+	}
+}

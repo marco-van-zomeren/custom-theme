@@ -1,0 +1,118 @@
+.js__fx,
+svg.animate {
+    animation-play-state: paused;
+}
+
+// FADE IN 
+.animate__fadeIn,
+.animate__fadeInUp,
+.animate__fadeInRight,
+.animate__fadeInLeft,
+.animate__fadeInDown {
+    opacity: 0;
+}
+
+// IMG REVEAL
+img.reveal_left-right,
+.reveal_left-right {
+    animation: clippath_left-right 2s;
+    clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+}
+
+@keyframes clippath_left-right {
+    0% {
+        clip-path: polygon(0 100%, 0 0, 0% 0, 0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0 100%, 0 0, 10% 0, 10% 100%);
+    }
+
+    100% {
+        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+    }
+}
+
+img.reveal_bottom-up,
+.reveal_bottom-up {
+    animation: clippath_bottom-up 2s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@keyframes clippath_bottom-up {
+    0% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+// CUSTOM DELAY
+@include media-breakpoint-up(md) {
+    $delay: 0;
+    $delaynr: 0;
+
+    @while $delay < 1.8 {
+        $delay: $delay + 0.2;
+        $delaynr: $delaynr + 1;
+
+        .animated.delay-#{$delaynr} {
+            -webkit-animation-delay: #{$delay}s;
+            animation-delay: #{$delay}s;
+        }
+    }
+}
+
+.delay-0 {
+    -webkit-animation-delay: 0 !important;
+    animation-delay: 0 !important;
+}
+
+// ANIMATE SVG
+svg.animate {
+    stroke-dashoffset: 1000;
+}
+
+.animated svg.animate path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 20s linear;
+    animation-iteration-count: 1;
+    stroke: var(--color_tertiary) !important;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+// ARROW    
+@include media-breakpoint-up(md) {
+    path.arrow_end {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+
+    }
+
+    a:hover svg.arrow path.arrow_end {
+        animation: dash 1s linear forwards;
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

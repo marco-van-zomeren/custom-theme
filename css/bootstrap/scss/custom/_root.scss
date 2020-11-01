@@ -1,0 +1,39 @@
+:root {
+  --color-body: $gray-900;	
+		
+  --text-black: #{$black};
+  --text-white: #{$white};
+
+  @each $color, $value in $grays {
+    --bs-gray-#{$color}: #{$value};
+  }
+	
+  @each $color, $value in $colors {
+    --bs-#{$color}: #{$value};
+  }
+
+  @each $color, $value in $theme-colors {
+    --bs-#{$color}: #{$value};
+  }
+	
+  --text-link: #{$link};
+
+  --bs-font-sans-serif: #{inspect($font-family-sans-serif)};
+  --bs-font-monospace: #{inspect($font-family-monospace)};
+	
+  --color-btn-primary: #{$black}; 
+  
+  // Gutter size	
+  --spacer: #{$spacer};
+  .container {
+  --bs-gutter-x: 40px;
+  }	
+  .row {
+  --bs-gutter-x: 20px;
+  }	
+}
+
+body {
+	color: var(--color-body);
+	background-color: var(--footer-background-color)!important;
+}

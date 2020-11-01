@@ -1,0 +1,117 @@
+ul {
+    &.bullets li {
+        display: table;
+        margin-bottom: 0.35rem;
+
+        &:before {
+            content: "•";
+            display: table-cell;
+            padding-right: 0.5rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.before\:none:before {
+            content: "";
+            padding-left: 5px;
+        }
+    }
+	&.check-marks > li {
+        line-height: 1.5;
+        margin-bottom: 0.35rem;
+        margin-left: 1.35rem;
+        list-style: none;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0
+        }
+
+        &:before {
+            @include fa-icon;
+            content: "\f00c";
+            font-size: 13px;
+            padding-right: 0;
+            display: inherit;
+            position: absolute;
+            left: -1.35rem;
+            top: 4px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .columns_2 {
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+        column-gap: 0;
+    }
+}
+
+ol {
+    &.counter > li {
+        counter-increment: step-counter;
+        list-style-type: none;
+        position: relative;
+
+        &::before {
+            content: counter(step-counter);
+            margin-right: 1em;
+            font-size: 1em;
+            background: none;
+            color: inherit;
+            font-weight: bold;
+            padding: 0;
+            position: absolute;
+            top: 0;
+			bottom: 0;
+			left: -1rem;
+			line-height: 25px;
+        }
+
+        margin-left: 1rem;
+        position: relative;
+    }
+
+    &.counter_multiple-numbers > li {
+        margin-left: 1.45rem;
+        &::before {
+            left: -1.45rem;
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5em;
+            text-align: right;
+            direction: rtl
+        }
+    }
+
+    li {
+        margin: 0 0 0.35rem 0;
+    }
+}
+
+ul {
+    &.bullets,
+    &.check-marks {
+        margin-bottom: 1em;
+        position: relative;
+    }
+}
+
+ol.counter {
+    margin-bottom: 1em;
+    position: relative;
+}
+
+ul.bullets ul,
+ul.check-marks ul,
+ol.counter ol,
+ul.bullets ol.counter,
+ul.check-marks ol.counter,
+ol.counter ul {
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+}

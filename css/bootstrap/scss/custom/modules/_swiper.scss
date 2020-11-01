@@ -1,0 +1,126 @@
+// RESET SWIPER
+.swiper-button-prev:after, 
+.swiper-button-next:after {
+	content: ''!important;
+}
+
+.swiper-button-prev:before, 
+.swiper-button-next:before {
+    position: relative;
+	top: -2px!important;
+}
+.swiper-button-prev:before {
+	left: -1px!important;
+}
+.swiper-button-next:before {
+	right: -1px!important;
+}
+
+// SWIPER SLIDE
+.swiper-slide {
+    display: grid;
+	&.vh-md-30 {
+		@include media-breakpoint-up(md) {
+			height: 30vh!important;
+		}
+	}
+	&.vh-lg-30 {
+		@include media-breakpoint-up(lg) {
+        	height: 30vh!important;
+		}
+    }
+	&.vh-md-50 {
+		@include media-breakpoint-up(md) {
+			height: 50vh!important;
+		}
+	}
+	&.vh-lg-50 {
+		@include media-breakpoint-up(lg) {
+        	height: 50vh!important;
+		}
+    } 
+	&.vh-50 {
+		@include media-breakpoint-down(md) {
+			height: 50vh!important;
+		}
+	}
+	&.vh-md-80{
+		@include media-breakpoint-up(md) {
+        	height: 80vh!important;
+		}
+	}
+	&.vh-lg-80 {
+		@include media-breakpoint-up(lg) {
+        	height: 80vh!important;
+		}
+    }  
+	&.vh-md-100 {
+		@include media-breakpoint-up(md) {
+        	height: 100vh!important;
+		}
+    }
+}
+
+.swiper-container-autoheight .swiper-slide {
+    display: inline-block
+}
+
+.swiper-slide__content {
+    padding-left: calc( var(--spacer) * 3);
+    padding-right: calc( var(--spacer) * 3);
+    @include media-breakpoint-down(md) {
+        padding-left: calc( var(--spacer) * 2);
+        padding-right: calc( var(--spacer) * 2);
+    }
+}
+
+// SWIPER BULLETS
+.swiper-pagination-bullet {
+    background: grey!important;
+}
+.swiper-pagination-bullet-active {
+    background: var(--text-black)!important;
+}
+
+// SWIPER BUTTONS
+.swiper-button,
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.swiper-button:hover,
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: var(--text-black) !important;
+    @media (prefers-color-scheme: dark) {
+         background: black!important;
+    }
+}
+
+.swiper-button,
+.swiper-button-prev,
+.swiper-button-next {
+    background-image: none!important;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 100%;
+}
+
+.swiper-button-prev:before {
+    @include material-icons;
+    content: "keyboard_arrow_left";
+    font-size: 30px;
+    color: white;
+    line-height: 40px;
+}
+
+.swiper-button-next:before {
+    @include material-icons;
+    content: "keyboard_arrow_right";
+    font-size: 30px;
+    color: white;
+    line-height: 40px;
+}
