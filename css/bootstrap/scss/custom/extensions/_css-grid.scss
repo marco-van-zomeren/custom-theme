@@ -1,0 +1,12 @@
+.d-grid {
+    grid-gap: var(--spacer);
+    grid-template-columns: repeat(12, 1fr);
+    min-width: 0;
+	&:not(.row-gap){
+		row-gap: 0;
+	}
+}
+
+*[class^="gtc"] {
+    display: grid
+}

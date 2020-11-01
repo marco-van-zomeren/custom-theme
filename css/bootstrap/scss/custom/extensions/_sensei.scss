@@ -1,0 +1,42 @@
+.sensei {
+	input[type="radio"], input[type="checkbox"] {
+    display: block;
+	-webkit-appearance: auto!important;
+	
+}
+	form input,
+	form .form-row input,
+	form .form-row textarea {
+		margin-bottom: 20px!important;		
+	}
+	
+	input[type=submit],
+	a.button.send-message-button,
+	.lesson input.quiz-submit.complete, .quiz input.quiz-submit.complete{
+	@extend  .btn;
+	&:hover {
+		@extend  .btn-hover;
+	}
+	@extend  .btn-animation;
+	}
+	.progress {
+		background: none;
+    	box-shadow: none;
+    	font-size: 1rem;
+		height: auto;
+	}
+	.contact-teacher textarea {
+		margin-bottom: 20px;
+	}
+	
+	// COLS
+	@include media-breakpoint-up(md) {
+	.col2-set {
+		.col-1, .col-2 {
+			width: 50%!important;
+			float: left;
+		}
+	}
+	}
+}
+

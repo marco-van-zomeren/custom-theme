@@ -1,0 +1,34 @@
+$hovers: (
+    bg-gray-100,
+	bg-primary,
+	bg-primary-darken-10,
+	bg-secondary,
+	bg-secondary-darken-10,
+	bg-tertiary,
+	bg-tertiary-darken-10,
+    border-bottom,
+	text-white,
+	text-primary,
+	text-secondary,
+	text-tertiary,
+);
+
+@each $hover in $hovers {
+    .hover\:#{$hover}:hover,
+	.c\:hover\:#{$hover} >* > a:hover {
+        @extend .#{$hover}
+    } 
+}
+
+$hovers-with-a: (
+	text-primary,
+	text-secondary,
+	text-tertiary,
+);
+
+@each $hover in $hovers-with-a {
+	.c\:hover\:#{$hover} > a:hover {
+        @extend .#{$hover}
+    } 
+}
+

@@ -1,0 +1,34 @@
+// BUTTONS
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+#eu-cookie-law.negative input[type=submit] {
+	@extend  .btn;
+	&:hover {
+		@extend  .btn-hover;
+	}
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+#eu-cookie-law.negative input[type=submit] {
+	@extend  .btn-animation
+}
+
+// INPUT
+.woocommerce-form-row {
+	label {
+		@extend .label
+	}
+}
