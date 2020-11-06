@@ -6,10 +6,10 @@
         <?php single_term_title(); ?>
       </h1>
     </header>
-    <section class="row"> 
-	  <a class="d-block p-0 mb-10 ml-10 float-left w-auto text-black" data-toggle="collapse" href="#categories" role="button" aria-expanded="false" aria-controls="collapse"><i class="fas fa-chevron-down"></i> Categories</a>
+    <section class="row text-lg-center"> 
+	  <a class="d-block p-0 mb-10 ml-10 float-left w-auto text-black d-lg-none" data-toggle="collapse" href="#categories" role="button" aria-expanded="false" aria-controls="collapse"><i class="fas fa-chevron-down"></i> Categories</a>
 		
-      <div class="button-group filters-button-group postion-relative ml-n5 clear-both collapse" id="categories">
+      <div class="button-group filters-button-group postion-relative ml-n5 clear-both d-lg-block collapse" id="categories">
         <?php
         $terms = get_terms( 'jetpack-portfolio-type', array(
           'hide_empty' => false
