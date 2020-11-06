@@ -1,4 +1,4 @@
-<section class="bg-white pt-20 p-md-60 pt-md-0 overflow-hidden position-relative">
+<section class="overflow-hidden position-relative">
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-6 col-xl-7 d-flex justify-content-center">
@@ -6,10 +6,10 @@
           <p class="text-tertiary font-size-sm animate__fadeInUp js__fx">
             <?php block_field( 'preheader' ); ?>
           </p>
-          <h1 class="text-gray-800 display-5 font-playfair  animate__fadeInUp delay-1 js__fx">
+          <h1 class="text-gray-800 display-5 font-playfair">
             <?php block_field( 'title' ); ?>
           </h1>
-          <p class="mb-20 text-gray-600 animate__fadeInUp delay-2 js__fx">
+          <p class="mb-20 text-gray-600">
             <?php block_field( 'intro' ); ?>
           </p>
           <a href="<?php block_field( 'ctaurl' ); ?>" class="btn border bw-2 border-tertiary text-uppercase text-tertiary hover:text-white hover:bg-tertiary rounded-pill mb-20 animate__fadeInUp delay-3 js__fx">
@@ -20,7 +20,7 @@
       <!-- SWIPER -->
       <div class="col-12 col-lg-6 col-xl-5">
         <div class="mb-20 mb-md-0 p-0 pl-md-40">
-          <div class="swiper-container" id="swiper">
+          <div class="swiper-container" id="block-slider-small">
             <div class="swiper-wrapper vh-50 vh-md-30 vh-lg-50 mh-500">
               <?php
               $args = array(
@@ -71,7 +71,7 @@
   </div>
 </section>
 <script type="text/javascript">
-    var swiper = new Swiper('#swiper', {
+    var swiper = new Swiper('#block-slider-small', {
         slidesPerView: 1,
         spaceBetween: 20,
         keyboard: {

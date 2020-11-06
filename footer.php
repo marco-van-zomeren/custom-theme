@@ -104,8 +104,7 @@
     });
 	// ISOTOPE
 	var $grid = jQuery('.grid').isotope({
-	  itemSelector: '.grid-item',
-
+	  itemSelector: '.grid-item'
 	});
 	jQuery('.filters-button-group').on( 'click', 'button', function() {
 	  var filterValue = jQuery( this ).attr('data-filter');
