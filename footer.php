@@ -92,9 +92,10 @@
       </div>
       <!-- --> 
     </div>
-    <?php dynamic_sidebar( 'sidebar-4' ); ?>
+	<?php dynamic_sidebar( 'sidebar-footer' ); ?>  
   </div>
 </footer>
+<?php dynamic_sidebar( 'sidebar-cookies' ); ?>
 <?php wp_footer(); ?>
 <script>
     // AUDIO PLAYER

@@ -64,8 +64,8 @@ function post_link_attributes($output) {
 
 // SIDEBARS
 if ( function_exists('register_sidebar') ) {
-    $sidebar1 = array(
-		'id'            => 'sidebar-1',
+    $sidebarDefault = array(
+		'id'            => 'sidebar-default',
 		'description'   => __( 'Add widgets here to appear in your sidebar.' ),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
@@ -73,28 +73,30 @@ if ( function_exists('register_sidebar') ) {
         'after_title' => '</h2>',        
         'name'=>__( 'Sidebar', 'textdomain' ),  
     );  
-    $sidebar2 = array(
-		'id'            => 'sidebar-2',
+    $sidebarCookies = array(
+		'id'            => 'sidebar-cookies',
 		'description'   => __( 'This is for the cookie notification. Don&rsquo;t place other widgets here.' ),      
-        'name'=>__( 'Cookies', 'textdomain' ),  
+        'name'=>__( 'Cookies', 'textdomain' ), 
+		'before_widget' => '<div class="widget %2$s">',
+        'after_widget' => '</div>',
     );
-	$sidebar3 = array(
-		'id'            => 'sidebar-3',
+	$sidebarShop = array(
+		'id'            => 'sidebar-shop',
 		'description'   => __( 'This is the sidebar for the shop.' ),      
         'name'=>__( 'Woocommerce', 'textdomain' ),  
     );
-	$sidebar4 = array(
-		'id'            => 'sidebar-4',
+	$sidebarFooter = array(
+		'id'            => 'sidebar-footer',
 		'description'   => __( 'This is the custom area in the footer.' ),      
         'name'=>__( 'Footer', 'textdomain' ),
 		'before_widget' => '',
     	'after_widget' => '',
     );
      
-    register_sidebar($sidebar1);
-    register_sidebar($sidebar2);
-	register_sidebar($sidebar3);
-	register_sidebar($sidebar4);
+    register_sidebar($sidebarDefault);
+    register_sidebar($sidebarCookies);
+	register_sidebar($sidebarShop);
+	register_sidebar($sidebarFooter);
 }
 
 // FILE TYPES

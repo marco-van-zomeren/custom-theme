@@ -42,6 +42,6 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_p
 // Hide cart when empty
 add_action( 'wp_footer', function() {    
     if ( WC()->cart->is_empty() ) {
-        echo '<style type="text/css">.cart__total{ display: none; }</style>';
+        echo '<style type="text/css">#cart-total{ display: none; }</style>';
     }
 });

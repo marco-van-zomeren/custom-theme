@@ -1,32 +1,15 @@
 <section class="overflow-hidden position-relative">
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-6 col-xl-7 d-flex justify-content-center">
-        <div class="align-self-center text-center">
-          <p class="text-tertiary font-size-sm animate__fadeInUp js__fx">
-            <?php block_field( 'preheader' ); ?>
-          </p>
-          <h1 class="text-gray-800 display-5 font-playfair">
-            <?php block_field( 'title' ); ?>
-          </h1>
-          <p class="mb-20 text-gray-600">
-            <?php block_field( 'intro' ); ?>
-          </p>
-          <a href="<?php block_field( 'ctaurl' ); ?>" class="btn border bw-2 border-tertiary text-uppercase text-tertiary hover:text-white hover:bg-tertiary rounded-pill mb-20 animate__fadeInUp delay-3 js__fx">
-          <?php block_field( 'ctatext' ); ?>
-          </a> </div>
-      </div>
-      
+    <div class="row"> 
       <!-- SWIPER -->
       <div class="col-12 col-lg-6 col-xl-5">
         <div class="mb-20 mb-md-0 p-0 pl-md-40">
-          <div class="swiper-container" id="block-slider-small">
+          <div class="swiper-container" id="block-slider-small-portfolio">
             <div class="swiper-wrapper vh-50 vh-md-30 vh-lg-50 mh-500">
               <?php
               $args = array(
-                'post_type' => 'post',
+                'post_type' => 'jetpack-portfolio',
                 'post_status' => 'publish',
-                'category_name' => block_value( 'category' ),
               );
               $arr_posts = new WP_Query( $args );
               if ( $arr_posts->have_posts() ):
@@ -67,11 +50,28 @@
         </div>
       </div>
       <!-- --> 
+      <!-- TEXT -->
+      <div class="col-12 col-lg-6 col-xl-7 d-flex justify-content-center">
+        <div class="align-self-center text-center">
+          <p class="text-tertiary font-size-sm">
+            <?php block_field( 'preheader' ); ?>
+          </p>
+          <h1 class="text-gray-800 display-5">
+            <?php block_field( 'title' ); ?>
+          </h1>
+          <p class="mb-20 text-gray-600">
+            <?php block_field( 'intro' ); ?>
+          </p>
+          <a href="<?php block_field( 'cta-url' ); ?>" class="btn border bw-2 border-tertiary text-uppercase text-tertiary hover:text-white hover:bg-tertiary rounded-pill mb-20 mb-md-0 animate__fadeInUp delay-3 js__fx">
+          <?php block_field( 'cta-text' ); ?>
+          </a> </div>
+      </div>
+      <!-- --> 
     </div>
   </div>
 </section>
 <script type="text/javascript">
-    var swiper = new Swiper('#block-slider-small', {
+    var swiper = new Swiper('#block-slider-small-portfolio', {
         slidesPerView: 1,
         spaceBetween: 20,
         keyboard: {
