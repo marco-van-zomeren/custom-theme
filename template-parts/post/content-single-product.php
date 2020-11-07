@@ -1,6 +1,5 @@
-<div class="container">
+<div class="container pb-40">
   <div class="row"> 
-    
     <!-- SLIDER -->
     <section class="col-12 col-md-6 pr-20">
       <div class="swiper-container gallery-top h-400 h-lg-600 mb-20">
@@ -163,10 +162,12 @@
       </div>
     </section>
   </div>
-  <!-- RELATED -->
-  <div class="row">
+</div>
+<!-- RELATED -->
+<section class="bg-secondary py-40">
+  <div class="container">
     <div class="text-center">
-      <h2 class="display-6 mb-10">Related</h2>
+      <h2 class="display-6 mb-10 text-white">Related</h2>
     </div>
     <div class="swiper-container" id="related-products">
       <div class="swiper-wrapper">
@@ -210,9 +211,11 @@
       <div class="swiper-button-next top-150"></div>
       <div class="swiper-button-prev top-150"></div>
     </div>
+    <div class="text-center"><br>
+      <a href="/shop" class="btn border bw-2 border-tertiary text-uppercase text-tertiary hover:text-white hover:bg-tertiary rounded-pill mb-20 mb-md-0 animate__fadeInUp delay-3 animate__animated"> View all </a> </div>
   </div>
-  <!-- --> 
-</div>
+</section>
+<!-- --> 
 <script type="text/javascript">
 var galleryThumbs = new Swiper('.gallery-thumbs', {
     spaceBetween: 10,

@@ -1,5 +1,4 @@
-<section class="p-20 p-md-40 text-center">
-  <div class="container">
+<section class="text-center">
     <div class="row">
       <?php
       $args = array(
@@ -42,5 +41,4 @@
       wp_reset_query();
       ?>
     </div>
-  </div>
 </section>
