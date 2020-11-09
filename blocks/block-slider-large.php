@@ -19,7 +19,6 @@
       <div class="swiper-button-prev top-50%"></div>
     </div>
     <!-- Add Arrows --> 
-    
   </div>
 </section>
 <script>

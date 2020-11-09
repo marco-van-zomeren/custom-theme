@@ -167,7 +167,7 @@
 <section class="bg-secondary py-40">
   <div class="container">
     <div class="text-center">
-      <h2 class="display-6 mb-10 text-white">Related</h2>
+      <h2 class="display-6 mb-10 text-footer">Related</h2>
     </div>
     <div class="swiper-container" id="related-products">
       <div class="swiper-wrapper">

@@ -19,15 +19,18 @@
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-1' ] );
           echo $menu->name;
           ?>
-          </span> </p>
+          </span> 
+		  </p>
         <?php
-        wp_nav_menu( array(
-          'theme_location' => 'footer-menu-1',
-          'container' => false,
-          'menu_class' => 'collapse d-md-block',
-          'add_li_class' => 'py-10',
-          'menu_id' => 'footer-menu-1'
-        ) )
+        if ( has_nav_menu( 'footer-menu-1' ) ) {
+          wp_nav_menu( array(
+            'theme_location' => 'footer-menu-1',
+            'container' => false,
+            'menu_class' => 'collapse d-md-block',
+            'add_li_class' => 'py-10',
+            'menu_id' => 'footer-menu-1'
+          ) );
+        }
         ?>
       </div>
       <!-- --> 
@@ -41,13 +44,15 @@
           ?>
           </span> </p>
         <?php
-        wp_nav_menu( array(
-          'theme_location' => 'footer-menu-2',
-          'container' => false,
-          'menu_class' => 'collapse d-md-block',
-          'add_li_class' => 'py-10',
-          'menu_id' => 'footer-menu-2'
-        ) )
+        if ( has_nav_menu( 'footer-menu-2' ) ) {
+          wp_nav_menu( array(
+            'theme_location' => 'footer-menu-2',
+            'container' => false,
+            'menu_class' => 'collapse d-md-block',
+            'add_li_class' => 'py-10',
+            'menu_id' => 'footer-menu-2'
+          ) );
+        }
         ?>
       </div>
       <!-- --> 
@@ -55,19 +60,22 @@
       <div class="col-12 col-md-3">
         <p class="font-weight-700 text-transform-uppercase d-table" data-toggle="collapse" data-target="#footer-menu-3" aria-expanded="false" aria-controls="collapse"> <i class="material-icons d-table-cell align-middle d-block d-md-none position-relative left-n5 transition-20"> keyboard_arrow_down </i> <span class="d-table-cell align-middle">
           <?php
+
           $locations = get_nav_menu_locations();
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-3' ] );
           echo $menu->name;
           ?>
           </span> </p>
         <?php
-        wp_nav_menu( array(
-          'theme_location' => 'footer-menu-3',
-          'container' => false,
-          'menu_class' => 'collapse d-md-block',
-          'add_li_class' => 'py-10',
-          'menu_id' => 'footer-menu-3'
-        ) )
+        if ( has_nav_menu( 'footer-menu-3' ) ) {
+          wp_nav_menu( array(
+            'theme_location' => 'footer-menu-3',
+            'container' => false,
+            'menu_class' => 'collapse d-md-block',
+            'add_li_class' => 'py-10',
+            'menu_id' => 'footer-menu-3'
+          ) );
+        }
         ?>
       </div>
       <!-- --> 
@@ -81,18 +89,20 @@
           ?>
           </span> </p>
         <?php
-        wp_nav_menu( array(
-          'theme_location' => 'footer-menu-4',
-          'container' => false,
-          'menu_class' => 'collapse d-md-block',
-          'add_li_class' => 'py-10',
-          'menu_id' => 'footer-menu-4'
-        ) )
+        if ( has_nav_menu( 'footer-menu-4' ) ) {
+          wp_nav_menu( array(
+            'theme_location' => 'footer-menu-4',
+            'container' => false,
+            'menu_class' => 'collapse d-md-block',
+            'add_li_class' => 'py-10',
+            'menu_id' => 'footer-menu-4'
+          ) );
+        }
         ?>
       </div>
       <!-- --> 
     </div>
-	<?php dynamic_sidebar( 'sidebar-footer' ); ?>  
+    <?php dynamic_sidebar( 'sidebar-footer' ); ?>
   </div>
 </footer>
 <?php dynamic_sidebar( 'sidebar-cookies' ); ?>
