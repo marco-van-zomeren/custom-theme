@@ -17731,13 +17731,20 @@ cite .c\:text-black > * > a {
     margin: 0 !important; }
   @media (min-width: 992px) {
     .menu-item-has-children .sub-menu {
+      border-radius: 5px;
+      box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.12);
+      margin-top: 5px;
+      overflow: hidden;
       position: absolute;
-      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
       z-index: 3; }
       .menu-item-has-children .sub-menu a {
-        padding: 10px !important;
+        border-bottom: 1px solid var(--bs-gray-200);
         display: block;
+        padding: 10px !important;
+        text-align: left !important;
         white-space: nowrap; } }
+  .menu-item-has-children .sub-menu li:last-child a {
+    border-bottom: none; }
   .menu-item-has-children .sub-menu a {
     width: 100%; }
     @media (min-width: 992px) {

@@ -9,9 +9,13 @@
 
     while ( $loop->have_posts() ): $loop->the_post();
 
-    get_template_part( 'template-parts/content/content', 'excerpt-product' );
+	  $test = block_value( 'excerpt-type' );
+	  get_template_part( 'template-parts/content/content', 'excerpt-music' );
 
     endwhile;
     ?>
   </div>
 </section>
+<?php
+wp_reset_query();
+?>

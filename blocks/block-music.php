@@ -16,8 +16,9 @@
       }
       ?>
       <div class="col-12 col-md-3 px-0 p-md-20">
-        <div id="post-<?php the_ID(); ?>" <?php post_class( "float-left w-1-1 js__fx animate__fadeInUp"); ?>>
-          <div class="position-relative w-1-1 mb-40"> <img class="block__image w-1-1 rounded js__equalheight" src="<?php echo $image_url ?>">
+        <div id="post-<?php the_ID(); ?>" <?php post_class( "float-left w-1-1"); ?>>
+          <div class="position-relative w-1-1 mb-40"> 
+			 <img class="block__image w-1-1 rounded js__equalheight" src="<?php echo $image_url ?>">
             <div class="audio d-table w-1-1 position-absolute top-0 left-0 js__equalheight" style="height: 100%">
               <?php $audio = get_children( array('post_parent' => $post->ID, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'audio' ) ); ?>
               <?php if ( empty( $audio ) ) : ?>
