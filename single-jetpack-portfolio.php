@@ -1,12 +1,13 @@
 <?php
 /*
- * Template Name: Design
+ * Template Name: Portfolio
  * Template Post Type: post, page, product
  */
 
 get_header();
 ?>
 <main class="bg-white">
+	Music
   <?php
   /* Start the Loop */
   while ( have_posts() ): the_post();

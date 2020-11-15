@@ -31,6 +31,11 @@ input[type=submit],
         border: 3px solid white;
     	}
     }
+	&:disabled {
+		background: var(--bs-gray-400)!important;
+		color: var(--bs-gray-600)!important;
+		border-color: var(--bs-gray-400)!important;
+	}
 }
 
 button:not(.btn_toggle-menu),

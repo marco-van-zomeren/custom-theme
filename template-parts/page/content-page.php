@@ -1,5 +1,5 @@
 <div class="row justify-content-center pb-40">
-  <div class="col-12 col-md-8">
+  <div class="col-12 col-md-6">
     <header>
       <h1 class="text-center">
         <?php the_title(); ?>

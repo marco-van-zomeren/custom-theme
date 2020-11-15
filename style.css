@@ -16333,6 +16333,23 @@ input[type=submit],
       color: var(--color-btn-primary);
       background: white;
       border: 3px solid white; }
+  button:disabled,
+  button.btn:disabled,
+  .woocommerce button.button:disabled,
+  input[type=submit]:disabled,
+  .btn:disabled,
+  .sensei input[type=submit]:disabled,
+  .sensei a.button.send-message-button:disabled,
+  .sensei .lesson input.quiz-submit.complete:disabled,
+  .sensei .quiz input.quiz-submit.complete:disabled,
+  .woocommerce #respond input#submit:disabled,
+  .woocommerce a.button:disabled,
+  .woocommerce button.button:disabled,
+  .woocommerce input.button:disabled,
+  #eu-cookie-law.negative input[type=submit]:disabled {
+    background: var(--bs-gray-400) !important;
+    color: var(--bs-gray-600) !important;
+    border-color: var(--bs-gray-400) !important; }
 
 button:not(.btn_toggle-menu),
 .btn:not(.p-0),
