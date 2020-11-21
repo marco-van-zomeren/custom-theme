@@ -326,6 +326,19 @@ function custom_customizer( $wp_customize ) {
       )
     )
   );
+  $wp_customize->add_setting( 'custom_shop-category' );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      'custom_shop-category',
+      array(
+        'label' => __( 'Shop primary category', 'custom-theme' ),
+        'section' => 'custom_shop-layout',
+        'settings' => 'custom_shop-category',
+        'type' => 'text'
+      )
+    )
+  );
 
 }
 add_action( 'customize_register', 'custom_customizer' );

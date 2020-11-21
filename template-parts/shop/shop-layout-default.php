@@ -6,6 +6,7 @@
           <?php
           wp_list_categories( array(
             'taxonomy' => 'product_cat',
+            'product_cat' => get_theme_mod( 'custom_shop-category' ),
             'title_li' => ''
           ) );
           ?>
