@@ -41,6 +41,19 @@ function custom_customizer( $wp_customize ) {
       )
     )
   );
+ $wp_customize->add_setting( 'custom_font-weight-headings' );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      'custom_font-weight-headings',
+      array(
+        'label' => __( 'Font weight headings (h1,h2,h3)', 'custom-theme' ),
+        'section' => 'custom_typography',
+        'settings' => 'custom_font-weight-headings',
+        'type' => 'text'
+      )
+    )
+  );
   $wp_customize->add_setting( 'custom_font-body' );
   $wp_customize->add_control(
     new WP_Customize_Control(
@@ -322,6 +335,7 @@ function generate_theme_option_css() {
   $fontFamily = get_theme_mod( 'custom_font' );
   $fontBody = get_theme_mod( 'custom_font-body' );
   $fontHeadings = get_theme_mod( 'custom_font-headings' );
+  $fontWeightHeadings = get_theme_mod( 'custom_font-weight-headings' );
   $colorBody = get_theme_mod( 'custom_body-color' );
   $colorLink = get_theme_mod( 'custom_link-color' );
   $colorHighlight = get_theme_mod( 'custom_highlight-color' );
@@ -341,8 +355,8 @@ font-family: <?php echo $fontBody;
 ?>
 }
 h1, h2, h3 {
-font-family: <?php echo $fontHeadings;
-?>
+font-family: <?php echo $fontHeadings; ?>;
+font-weight: <?php echo $fontWeightHeadings; ?>!important;
 }
 :root {
 --color-body: <?php echo $colorBody;

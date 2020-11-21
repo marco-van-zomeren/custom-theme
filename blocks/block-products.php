@@ -10,7 +10,7 @@
     while ( $loop->have_posts() ): $loop->the_post();
 
 	  $test = block_value( 'excerpt-type' );
-	  get_template_part( 'template-parts/content/content', 'excerpt-music' );
+	  get_template_part( 'template-parts/content/content', block_value( 'excerpt-type' ) );
 
     endwhile;
     ?>

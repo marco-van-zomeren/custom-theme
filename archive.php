@@ -1,5 +1,5 @@
 <?php get_header();?>
-<main class="bg-white p-20">
+<main class="bg-white py-20 px-0 px-md-40">
 <div class="container">
 <header class="row text-center">
   <h1>
@@ -9,7 +9,7 @@
 <section class="row text-center">
 	<?php get_template_part( 'template-parts/nav/nav', 'category'); ?>
 </section>
-<section class="row text-left p-0 px-40">
+<section class="row text-left">
   <?php if ( have_posts() ) : ?>
   <?php
   // Start the Loop.
