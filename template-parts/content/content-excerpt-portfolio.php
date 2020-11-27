@@ -8,9 +8,9 @@
   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_small' ); ?>
   <div class="block__content">
     <div class="block__title position-absolute top-0 left-0 w-1-1 h-1-1 d-flex justify-content-center z-2">
-	  <span class="font-size-xxl font-weight-700 text-center text-white p-40 align-self-center">
+	  <h2 class="block__title__heading text-center text-white p-40 align-self-center">
       <?php the_title(); ?>
-      </span> 
+      </h2> 
 	</div>
     <div class="block__image-container overflow-hidden">
       <div class="block__image-overlay position-absolute top-0 left-0 w-1-1 h-1-1 bg-hsl-black bg-alpha-50 z-2"> </div>

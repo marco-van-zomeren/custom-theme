@@ -10,6 +10,10 @@ nav ul li a[aria-current="page"] {
 	color: var(--color-current-page)
 }
 
+.bg-nav {
+    background: var(--nav-background-color);
+}
+
 // Mobile first
 @include media-breakpoint-down(lg){
 	.nav .container {

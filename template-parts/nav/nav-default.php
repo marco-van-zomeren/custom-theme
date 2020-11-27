@@ -1,8 +1,8 @@
-<section class="nav bg-white p-lg-20 position-relative z-6">
+<section class="nav bg-nav p-lg-20 position-relative z-6">
   <div class="container p-0 position-relative">
     <nav class="h-50 h-lg-90 position-relative z-6"> 
       <!-- LOGO MOBILE -->
-      <div class="bg-white pl-50 postion-absolute w-1-1 h-50 d-table d-lg-none"> <a href="<?php echo get_bloginfo('url'); ?>" class="d-table-cell align-middle text-center">
+      <div class="bg-nav pl-50 postion-absolute w-1-1 h-50 d-table d-lg-none"> <a href="<?php echo get_bloginfo('url'); ?>" class="d-table-cell align-middle text-center">
         <?php
         $custom_logo_id = get_theme_mod( 'custom_logo' );
         $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id, 'full' );

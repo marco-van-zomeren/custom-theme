@@ -1,5 +1,5 @@
 <?php get_header();?>
-<main class="bg-white">
+<main class="bg-main">
   <article class="container">
     <?php
     while ( have_posts() ): the_post();
@@ -9,14 +9,13 @@
     ?>
   </article>
 </main>
-
 <!-- SHARE PAGE -->
-<section class="bg-white text-center p-20">
+<section class="bg-main text-center p-20">
   <?php get_template_part( 'template-parts/share/share', 'page-horizontal'); ?>
 </section>
 <!-- -->
 <!-- RELATED POSTS -->
-<section class="bg-white py-20 px-10 px-md-30">
+<section class="bg-main py-20 px-10 px-md-30">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">

@@ -33,10 +33,11 @@
       		z-index: 3;
 			a {
 				border-bottom: 1px solid var(--bs-gray-200);
-			display: block;
-			padding: 10px!important;
-			text-align: left!important;
-			white-space: nowrap;
+			    display: block;
+			    padding: 1rem!important;
+			    text-align: left!important;
+                text-transform: initial!important;
+			    white-space: nowrap;
 			}
 		}
 		li:last-child a {
@@ -56,4 +57,12 @@
 // IMAGE HEIGHT FIX
 .wp-block-image img {
 	height: auto
+}
+
+// NAV PORTFOLIO CATEGORIES
+#categrories button {
+    transition: all 0.2s;
+    &.current {
+	    box-shadow: 0 2px rgba(0,0,0,0.2);
+    }
 }

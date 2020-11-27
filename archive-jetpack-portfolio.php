@@ -1,5 +1,5 @@
 <?php get_header();?>
-<main class="bg-white pb-20 px-lg-20">
+<main class="bg-main pb-20 px-lg-20">
   <div class="container">
     <header class="row text-center">
       <h1>
@@ -17,7 +17,7 @@
 
         foreach ( $terms as $term ) {
           ?>
-        <button class="bg-transparent text-black font-size-xs p-5 px-20 border bw-1 rounded-pill m-5" data-filter=".<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
+        <button class="bg-transparent border-0 font-weight-400 text-black fons-size-d uppercase px-10 m-5" data-filter=".<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
         <?php
         }
         ?>

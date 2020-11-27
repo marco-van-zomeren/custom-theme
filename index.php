@@ -1,5 +1,5 @@
 <?php get_header();?>
-<main class="bg-white">
+<main class="bg-main">
   <div class="container py-20">
     <header class="row text-center">
       <h1 class="animate__fadeInUp js__fx">
@@ -24,7 +24,7 @@
           <span class="tabs__toggle-container"> <a class="tabs__toggle text-black">MORE<span class="icon--toggle"></span></a> </span> </div>
       </div>
       <div class="tabs__more">
-        <ul class="tabs__more__list list__clone bg-white shadow-sm z-2">
+        <ul class="tabs__more__list list__clone bg-main shadow-sm z-2">
         </ul>
       </div>
     </section>

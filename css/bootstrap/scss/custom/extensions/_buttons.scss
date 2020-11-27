@@ -82,7 +82,7 @@ input[type=submit],
     }
     position: relative;
     overflow: hidden;
-    &:not(.font-s-d) {
+    &:not(.font-s-d) i {
         font-size: 0.8em;
         position: relative;
         top: -0.1em;
@@ -175,11 +175,6 @@ button {
 }
 *[aria-expanded="true"] > i.fa-chevron-down {
 	transform: rotate(180deg)
-}
-
-// CURRENT
-button.current {
-	background: var(--bs-gray-200)!important;
 }
 
 // ARROW

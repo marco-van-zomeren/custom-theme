@@ -149,6 +149,17 @@ function custom_customizer( $wp_customize ) {
       'settings' => 'custom_tertiary-color'
     )
   ) );
+  // Color nav
+  $wp_customize->add_setting( 'custom_nav-background-color' );
+  $wp_customize->add_control( new WP_Customize_Color_Control(
+    $wp_customize,
+    'custom_nav-background-color',
+    array(
+      'label' => __( 'Nav background color', 'custom-theme' ),
+      'section' => 'custom_colors',
+      'settings' => 'custom_nav-background-color'
+    )
+  ) );
   // Color nav text
   $wp_customize->add_setting( 'custom_nav-text-color' );
   $wp_customize->add_control( new WP_Customize_Color_Control(
@@ -356,6 +367,7 @@ function generate_theme_option_css() {
   $colorPrimary = get_theme_mod( 'custom_primary-color' );
   $colorSecondary = get_theme_mod( 'custom_secondary-color' );
   $colorTertiary = get_theme_mod( 'custom_tertiary-color' );
+  $navBackgroundColor = get_theme_mod( 'custom_nav-background-color' );
   $navTextColor = get_theme_mod( 'custom_nav-text-color' );
   $navHoverColor = get_theme_mod( 'custom_nav-hover-color' );
   $footerBackgroundColor = get_theme_mod( 'custom_footer-background-color' );
@@ -385,6 +397,8 @@ font-weight: <?php echo $fontWeightHeadings; ?>!important;
 --color-secondary: <?php echo $colorSecondary;
 ?>;
 --color-tertiary: <?php echo $colorTertiary;
+?>;
+--nav-background-color: <?php echo $navBackgroundColor;
 ?>;
 --nav-text-color: <?php echo $navTextColor;
 ?>;

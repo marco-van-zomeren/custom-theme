@@ -6,8 +6,7 @@
 
 get_header();
 ?>
-<main class="bg-white">
-	Music
+<main class="bg-main">
   <?php
   /* Start the Loop */
   while ( have_posts() ): the_post();
@@ -19,10 +18,10 @@ get_header();
 <aside class="text-center p-20">
   <?php get_template_part( 'template-parts/share/share', 'page-horizontal'); ?>
 </aside>
-<section class="bg-secondary pt-40">
+<section class="pt-40">
   <div class="container">
     <div class="text-center">
-      <h2 class="display-4 text-white">Related</h2>
+      <h2 class="display-4">Related</h2>
     </div>
     <div class="py-20">
       <div class="swiper-container">

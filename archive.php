@@ -1,5 +1,5 @@
 <?php get_header();?>
-<main class="bg-white py-20 px-0 px-md-40">
+<main class="py-20 px-0 px-md-40">
 <div class="container">
 <header class="row text-center">
   <h1>

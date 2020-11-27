@@ -1,4 +1,4 @@
-<div class="col-12 col-md-3">
+<div class="col-12 col-md-3 p-lg-40 text-center">
   <div id="post-<?php the_ID(); ?>" <?php post_class( "float-left w-1-1"); ?>>
     <?php if (has_post_thumbnail( $post->ID ) ): ?>
     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_s' ); ?>
@@ -15,7 +15,7 @@
       </div>
     </div>
     <?php endif; ?>
-    <div class="text-left">
+    <div>
       <h2>
         <?php the_title_attribute(); ?>
       </h2>

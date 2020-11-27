@@ -36,7 +36,7 @@
                 }
 			}
 		}
-		.block__title span {
+		.block__title .block__title__heading {
 			position: relative;
 			opacity: 0;
 			top:20%;
@@ -50,7 +50,7 @@
 			.block__image-overlay {
 				 opacity: 1;
 				}
-			.block__title span {
+			.block__title .block__title__heading {
 				opacity: 1;
 				top:0;
 			}
