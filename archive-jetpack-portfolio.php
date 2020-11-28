@@ -17,7 +17,7 @@
 
         foreach ( $terms as $term ) {
           ?>
-        <button class="bg-transparent border-0 rounded-0 font-weight-400 text-gray-500 fons-size-d uppercase px-0 mx-10" data-filter=".<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
+        <button class="bg-transparent border-0 rounded-0 font-weight-400 text-gray-500 hover:text-tertiary fons-size-d uppercase px-0 mx-10" data-filter=".<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
         <?php
         }
         ?>

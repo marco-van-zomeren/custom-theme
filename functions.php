@@ -87,8 +87,36 @@ if ( function_exists('register_sidebar') ) {
     );
 	$sidebarFooter = array(
 		'id'            => 'sidebar-footer',
-		'description'   => __( 'This is the custom area in the footer.' ),      
-        'name'=>__( 'Footer', 'textdomain' ),
+		'description'   => __( 'This is a full width custom area in the footer. It will appear at below all content.' ),      
+        'name'=>__( 'Footer full width', 'textdomain' ),
+		'before_widget' => '',
+    	'after_widget' => '',
+    );
+    $sidebarFooterColumnOne = array(
+		'id'            => 'sidebar-footer-col-1',
+		'description'   => __( 'This is the footer widget area for column 1' ),      
+        'name'=>__( 'Footer column 1', 'textdomain' ),
+		'before_widget' => '',
+    	'after_widget' => '',
+    );
+    $sidebarFooterColumnTwo = array(
+		'id'            => 'sidebar-footer-col-2',
+		'description'   => __( 'This is the footer widget area for column 2' ),      
+        'name'=>__( 'Footer column 2', 'textdomain' ),
+		'before_widget' => '',
+    	'after_widget' => '',
+    );
+    $sidebarFooterColumnThree = array(
+		'id'            => 'sidebar-footer-col-3',
+		'description'   => __( 'This is the footer widget area for column 3' ),      
+        'name'=>__( 'Footer column 3', 'textdomain' ),
+		'before_widget' => '',
+    	'after_widget' => '',
+    );
+    $sidebarFooterColumnFour = array(
+		'id'            => 'sidebar-footer-col-4',
+		'description'   => __( 'This is the footer widget area for column 4' ),      
+        'name'=>__( 'Footer column 4', 'textdomain' ),
 		'before_widget' => '',
     	'after_widget' => '',
     );
@@ -97,6 +125,10 @@ if ( function_exists('register_sidebar') ) {
     register_sidebar($sidebarCookies);
 	register_sidebar($sidebarShop);
 	register_sidebar($sidebarFooter);
+    register_sidebar($sidebarFooterColumnOne);
+    register_sidebar($sidebarFooterColumnTwo);
+    register_sidebar($sidebarFooterColumnThree);
+    register_sidebar($sidebarFooterColumnFour);
 }
 
 // FILE TYPES

@@ -19,8 +19,7 @@
           $menu = wp_get_nav_menu_object( $locations[ 'footer-menu-1' ] );
           echo $menu->name;
           ?>
-          </span> 
-		  </p>
+          </span> </p>
         <?php
         if ( has_nav_menu( 'footer-menu-1' ) ) {
           wp_nav_menu( array(
@@ -32,6 +31,7 @@
           ) );
         }
         ?>
+        <?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
       </div>
       <!-- --> 
       <!-- FOOTER COLUMN 2 -->
@@ -54,6 +54,7 @@
           ) );
         }
         ?>
+        <?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
       </div>
       <!-- --> 
       <!-- FOOTER COLUMN 3 -->
@@ -77,6 +78,7 @@
           ) );
         }
         ?>
+        <?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
       </div>
       <!-- --> 
       <!-- FOOTER COLUMN 4 -->
@@ -99,6 +101,7 @@
           ) );
         }
         ?>
+        <?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
       </div>
       <!-- --> 
     </div>

@@ -9,7 +9,7 @@ input[type=submit],
 	font-weight: 700;
     color: var(--color-btn-primary);
     background: transparent;
-    border: 3px solid;
+    border: 2px solid;
     border-radius: $rounded-pill;
     padding: 10px 30px;
     line-height: 2;
@@ -22,7 +22,7 @@ input[type=submit],
 		.btn-hover {
 			color: white;
 			background: var(--color-btn-primary)!important;
-			border: 3px solid var(--color-btn-primary);
+			border: 2px solid var(--color-btn-primary);
 		}
 	}
 	&.btn-white {
@@ -31,7 +31,7 @@ input[type=submit],
 		&:hover {
         color: var(--color-btn-primary);
         background: white;
-        border: 3px solid white;
+        border: 2px solid white;
     	}
     }
 	&:disabled {

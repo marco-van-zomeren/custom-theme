@@ -15684,7 +15684,7 @@ input[type=submit],
   font-weight: 700;
   color: var(--color-btn-primary);
   background: transparent;
-  border: 3px solid;
+  border: 2px solid;
   border-radius: 50rem;
   padding: 10px 30px;
   line-height: 2; }
@@ -16127,7 +16127,7 @@ input[type=submit],
     #eu-cookie-law.negative input[type=submit] input[type=submit]:hover {
       color: white;
       background: var(--color-btn-primary) !important;
-      border: 3px solid var(--color-btn-primary); } }
+      border: 2px solid var(--color-btn-primary); } }
   button.btn-white,
   button.btn.btn-white,
   .woocommerce button.btn-white.button,
@@ -16160,7 +16160,7 @@ input[type=submit],
     #eu-cookie-law.negative input.btn-white[type=submit]:hover {
       color: var(--color-btn-primary);
       background: white;
-      border: 3px solid white; }
+      border: 2px solid white; }
   button:disabled,
   button.btn:disabled,
   .woocommerce button.button:disabled,
