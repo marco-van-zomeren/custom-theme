@@ -44,6 +44,7 @@ select {
     border-radius: 0;
     float: left;
     transition: box-shadow .2s;
+    background: transparent;
     &:not(.border):not(.btn) {
        border: none;
     }

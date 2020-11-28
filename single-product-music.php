@@ -6,7 +6,7 @@
 
 get_header();
 ?>
-<main class="bg-white">
+<main class="bg-main">
   <?php
   /* Start the Loop */
   while ( have_posts() ): the_post();

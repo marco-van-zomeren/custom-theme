@@ -1,5 +1,5 @@
 <?php get_header();?>
-<main class="bg-white">
+<main class="bg-main">
   <div class="container">
     <header class="row text-center">
       <h1>

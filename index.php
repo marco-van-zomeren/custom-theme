@@ -29,7 +29,7 @@
       </div>
     </section>
     <section class="row justify-content-md-center">
-      <div class="col-12 col-md-10">
+      <div class="col-12 col-md-8">
         <?php
         $args = array(
           'post_type' => 'post',
@@ -44,7 +44,7 @@
           $image_url = $image_arr[ 0 ]; // $image_url is your URL.
         }
         ?>
-        <div id="post-<?php the_ID(); ?>" <?php post_class( "col-12 block block_link p-0 py-md-20 position-relative animate__fadeInUp js__fx"); ?>> <a class="block__link" href="<?php the_permalink(); ?>"></a>
+        <div id="post-<?php the_ID(); ?>" <?php post_class( "col-12 block block_link p-0 py-md-20 position-relative"); ?>> <a class="block__link" href="<?php the_permalink(); ?>"></a>
           <?php if (has_post_thumbnail( $post->ID ) ): ?>
           <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_small' ); ?>
           <div class="block__content row">
@@ -53,7 +53,7 @@
             </div>
             <?php endif; ?>
             <div class="col-12 col-md-6 d-flex justify-content-center-left">
-              <div class="pt-20 p-md-0 align-self-center">
+              <div class="pt-20 p-md-20 align-self-center">
                 <header>
                   <h3>
                     <?php the_title(); ?>

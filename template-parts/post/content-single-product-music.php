@@ -129,7 +129,7 @@
   </div>
 </div>
 <!-- RELATED -->
-<section class="bg-secondary py-40">
+<section class="py-40">
   <div class="container">
     <div class="text-center">
       <h2 class="display-6 mb-10 text-footer">Related</h2>
