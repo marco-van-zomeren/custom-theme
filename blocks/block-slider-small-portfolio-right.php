@@ -12,7 +12,7 @@
           <p class="mb-20 font-size-xl">
             <?php block_field( 'intro' ); ?>
           </p>
-          <a href="<?php block_field( 'cta-url' ); ?>" class="btn btn-primary-custom">
+          <a href="<?php block_field( 'cta-url' ); ?>" class="btn btn-primary-custom mb-20">
           <?php block_field( 'cta-text' ); ?>
           </a> 
 		  </div>

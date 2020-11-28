@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-  <div class="container mw-1-1">
+  <div class="container">
     <div class="row">
       <div id="post-<?php the_ID(); ?>" <?php post_class( "col-12"); ?>>
         
