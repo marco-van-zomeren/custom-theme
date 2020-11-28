@@ -60,9 +60,9 @@
 }
 
 // NAV PORTFOLIO CATEGORIES
-#categrories button {
+#categories button {
     transition: all 0.2s;
     &.current {
-	    box-shadow: 0 2px rgba(0,0,0,0.2);
+	   color: var(--color-body)!important;
     }
 }

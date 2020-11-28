@@ -15688,6 +15688,21 @@ input[type=submit],
   border-radius: 50rem;
   padding: 10px 30px;
   line-height: 2; }
+  button:focus,
+  button.btn:focus,
+  .woocommerce button.button:focus,
+  input[type=submit]:focus,
+  .btn:focus,
+  .sensei input[type=submit]:focus,
+  .sensei a.button.send-message-button:focus,
+  .sensei .lesson input.quiz-submit.complete:focus,
+  .sensei .quiz input.quiz-submit.complete:focus,
+  .woocommerce #respond input#submit:focus,
+  .woocommerce a.button:focus,
+  .woocommerce button.button:focus,
+  .woocommerce input.button:focus,
+  #eu-cookie-law.negative input[type=submit]:focus {
+    outline: none; }
   @media (min-width: 768px) {
     button:hover:not(.bg-transparent), button:active:not(.bg-transparent),
     button .btn-hover,
@@ -16164,7 +16179,7 @@ input[type=submit],
     color: var(--bs-gray-600) !important;
     border-color: var(--bs-gray-400) !important; }
 
-button:not(.btn_toggle-menu),
+button:not(.btn_toggle-menu):not(.bg-transparent),
 .btn:not(.p-0),
 .sensei input[type=submit]:not(.p-0),
 .sensei a.button.send-message-button:not(.p-0),
@@ -16203,7 +16218,7 @@ input[type=submit],
   text-align: center;
   position: relative;
   overflow: hidden; }
-  button:not(.btn_toggle-menu):not(.d-block),
+  button:not(.btn_toggle-menu):not(.bg-transparent):not(.d-block),
   .btn:not(.p-0):not(.d-block),
   .sensei input[type=submit]:not(.p-0):not(.d-block),
   .sensei a.button.send-message-button:not(.p-0):not(.d-block),
@@ -16226,7 +16241,7 @@ input[type=submit],
   .woocommerce input.button:not(.d-block),
   #eu-cookie-law.negative input[type=submit]:not(.d-block) {
     display: inline-block; }
-  button:not(.btn_toggle-menu).d-block,
+  button:not(.btn_toggle-menu):not(.bg-transparent).d-block,
   .btn:not(.p-0).d-block,
   .sensei input[type=submit]:not(.p-0).d-block,
   .sensei a.button.send-message-button:not(.p-0).d-block,
@@ -16249,7 +16264,7 @@ input[type=submit],
   .woocommerce input.d-block.button,
   #eu-cookie-law.negative input.d-block[type=submit] {
     display: block; }
-  button:not(.btn_toggle-menu):after,
+  button:not(.btn_toggle-menu):not(.bg-transparent):after,
   .btn:not(.p-0):after,
   .sensei input[type=submit]:not(.p-0):after,
   .sensei a.button.send-message-button:not(.p-0):after,
@@ -16289,7 +16304,7 @@ input[type=submit],
     transform: scale(10, 10);
     opacity: 0;
     transition: transform 0.5s, opacity 1s; }
-  button:not(.btn_toggle-menu):active:after,
+  button:not(.btn_toggle-menu):not(.bg-transparent):active:after,
   .btn:not(.p-0):active:after,
   .sensei input[type=submit]:not(.p-0):active:after,
   .sensei a.button.send-message-button:not(.p-0):active:after,
@@ -16314,7 +16329,7 @@ input[type=submit],
     transform: scale(0, 0);
     opacity: .2;
     transition: 0s; }
-  button:not(.btn_toggle-menu):not(.font-s-d) i,
+  button:not(.btn_toggle-menu):not(.bg-transparent):not(.font-s-d) i,
   .btn:not(.p-0):not(.font-s-d) i,
   .sensei input[type=submit]:not(.p-0):not(.font-s-d) i,
   .sensei a.button.send-message-button:not(.p-0):not(.font-s-d) i,
@@ -17565,10 +17580,10 @@ cite .c\:text-black > * > a {
 .wp-block-image img {
   height: auto; }
 
-#categrories button {
+#categories button {
   transition: all 0.2s; }
-  #categrories button.current {
-    box-shadow: 0 2px rgba(0, 0, 0, 0.2); }
+  #categories button.current {
+    color: var(--color-body) !important; }
 
 footer {
   color: var(--footer-text-color);
