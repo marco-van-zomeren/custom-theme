@@ -1,35 +1,5 @@
-@import "../../mixins/mixins";
-
-body,
-html {
-    color: var(--text-black);
-}
-
-.text-white,
-h1.text-white,
-h2.text-white,
-h3.text-white,
-h4.text-white {
-    color: white;
-    a {
-        color: white
-    }
-}
-
-.text-black,
-a.text-black {
-    color: var(--text-black);
-    a {
-        color: var(--text-black);
-    }
-}
-
-// MAIN BACKGROUND COLOR
-.bg-main {
-    background-color: var(--main-background-color)
-}
-
-// DARK MODE
+// DARK MODE 
+/*
 :root {
     color-scheme: light dark;
     supported-color-schemes: light dark;
@@ -64,6 +34,10 @@ a.text-black {
         filter: invert(1);
     }
 
+    .bg-main {
+        background-color:rgba(0,0,0, 0.90)
+    }
+    
     // BUTTONS 
     .btn-toggle-menu--inner::before,
     .btn-toggle-menu--inner::after {

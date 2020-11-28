@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-6 col-xl-7 d-flex justify-content-center">
-        <div class="align-self-center text-center">
+        <div class="align-self-center text-center" data-aos="fade-up">
           <p class="text-tertiary font-size-sm mt-20 mt-lg-0">
             <?php block_field( 'preheader' ); ?>
           </p>

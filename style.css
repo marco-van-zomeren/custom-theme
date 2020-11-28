@@ -17192,6 +17192,16 @@ cite .c\:text-black > * > a {
   cite a:hover:after {
     width: 100%; } }
 
+#categories button.current,
+a[aria-current="page"] {
+  color: var(--color-body) !important; }
+
+.bg-main {
+  background-color: var(--main-background-color); }
+
+.wp-block-image img {
+  height: auto; }
+
 .menu-item-has-children > a {
   cursor: pointer; }
   .menu-item-has-children > a:after {
@@ -17234,13 +17244,6 @@ cite .c\:text-black > * > a {
     @media (min-width: 992px) {
       .menu-item-has-children .sub-menu a:hover {
         background: var(--bs-gray-100); } }
-
-.wp-block-image img {
-  height: auto; }
-
-#categories button.current,
-a[aria-current="page"] {
-  color: var(--color-body) !important; }
 
 footer {
   color: var(--footer-text-color);

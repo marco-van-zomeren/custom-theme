@@ -7,6 +7,7 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js' );
 wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js' );
+wp_enqueue_script( 'aos', 'https://unpkg.com/aos@next/dist/aos.js' );
 wp_enqueue_script( 'isotope', 'https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js' );
 wp_enqueue_script( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js' );
 wp_enqueue_script( 'audioplayer', get_template_directory_uri().'/js/audioplayer.js', array(), '', true );

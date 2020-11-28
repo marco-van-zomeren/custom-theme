@@ -111,6 +111,8 @@
 <?php dynamic_sidebar( 'sidebar-cookies' ); ?>
 <?php wp_footer(); ?>
 <script>
+    // AOS
+    AOS.init();
     // AUDIO PLAYER
     GreenAudioPlayer.init({
         selector: '.player', // inits Green Audio Player on each audio container that has class "player"

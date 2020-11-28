@@ -44,7 +44,8 @@
           $image_url = $image_arr[ 0 ]; // $image_url is your URL.
         }
         ?>
-        <div id="post-<?php the_ID(); ?>" <?php post_class( "col-12 block block_link p-0 py-md-20 position-relative"); ?>> <a class="block__link" href="<?php the_permalink(); ?>"></a>
+        <div id="post-<?php the_ID(); ?>" <?php post_class( "col-12 block block_link p-0 py-md-20 position-relative"); ?> data-aos="fade-up"> 
+          <a class="block__link" href="<?php the_permalink(); ?>"></a>
           <?php if (has_post_thumbnail( $post->ID ) ): ?>
           <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_small' ); ?>
           <div class="block__content row">
