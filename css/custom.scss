@@ -11,7 +11,7 @@
 @import "bootstrap/scss/custom/bootstrap";
 
 // MODULES
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css');
+@import url('https://unpkg.com/aos@next/dist/aos.css');
 @import url('https://unpkg.com/swiper/swiper-bundle.min.css');
 @import "modules/audioplayer/audioplayer";
 @import "modules/coblocks";

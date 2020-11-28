@@ -3,7 +3,7 @@
 <?php $image_xl = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_xl' ); ?>
 <?php $image_l = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_l' ); ?>
 <?php $image_1x1 = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-image_1x1' ); ?>
-<section class="vh-50 vh-md-70 text-center d-flex justify-content-center position-relative overflow-hidden"> <img src="<?php echo $image_xxl[0]; ?>" sizes="
+<section class="container vh-50 vh-md-70 text-center d-flex justify-content-center position-relative overflow-hidden"> <img src="<?php echo $image_xxl[0]; ?>" sizes="
       (max-width: 420px),
       (max-width: 1024px),
       (max-width: 1440px)
@@ -11,7 +11,8 @@
       <?php echo $image_1x1[0]; ?> 420w,
       <?php echo $image_l[0]; ?> 1024w,
       <?php echo $image_xl[0]; ?> 1440w,
-      <?php echo $image_xxl[0]; ?> 2500w" class="object-fit-cover"> </section>
+      <?php echo $image_xxl[0]; ?> 2500w" class="object-fit-cover"> 
+</section>
 <?php endif; ?>
 <section class="bg-main py-40">
   <div class="container">

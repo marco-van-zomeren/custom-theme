@@ -2,7 +2,7 @@
   <div class="position-relative z-1">
     <div class="tabs js__tabs">
       <div class="tabs__container">
-        <ul class="tabs tabs__list c:text-black c:hover:text-tertiary text-uppercase">
+        <ul class="tabs tabs__list c:text-gray-500 c:hover:text-tertiary text-uppercase">
           <?php
           wp_list_categories( array(
             'taxonomy' => 'product_cat',

@@ -1,5 +1,5 @@
 <!-- SEARCH -->
-<section class="bg-white position-fixed top-0 left-0 w-1-1 h-1-1 justify-content-center z-6 collapse" id="search-form">
+<section class="bg-main position-fixed top-0 left-0 w-1-1 h-1-1 justify-content-center z-6 collapse" id="search-form">
   <div class="container">
     <div class="mt-20">
       <?php get_template_part( 'template-parts/nav/nav', 'search-form' ); ?>
@@ -8,7 +8,7 @@
 </section>
 <!-- -->
 
-<footer class="pt-20 pt-md-40 px-0 px-md-40">
+<footer class="pt-20 pt-md-40 px-0 px-md-20">
   <div class="container">
     <div class="row"> 
       <!-- FOOTER COLUMN 1 -->

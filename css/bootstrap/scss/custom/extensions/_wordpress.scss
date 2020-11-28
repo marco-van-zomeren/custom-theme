@@ -59,10 +59,8 @@
 	height: auto
 }
 
-// NAV PORTFOLIO CATEGORIES
-#categories button {
-    transition: all 0.2s;
-    &.current {
-	   color: var(--color-body)!important;
-    }
+// CURRENT
+#categories button.current,
+a[aria-current="page"] {
+    color: var(--color-body)!important;
 }

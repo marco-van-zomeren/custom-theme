@@ -2,14 +2,14 @@
 <main class="bg-main">
   <div class="container py-20">
     <header class="row text-center">
-      <h1 class="animate__fadeInUp js__fx">
+      <h1>
         <?php single_post_title(); ?> 
       </h1>
     </header>
-    <section class="pb-20 position-relative z-1 animate__fadeInUp delay-2 js__fx">
+    <section class="pb-20 position-relative z-1">
       <div class="tabs js__tabs">
         <div class="tabs__container">
-          <ul class="tabs tabs__list c:text-black c:hover:text-tertiary text-uppercase">
+          <ul class="tabs tabs__list c:text-gray-500 c:hover:text-tertiary text-uppercase">
           <?php
 		  $blogCategory =  get_theme_mod( 'custom_blog-category');
 			

@@ -4,7 +4,7 @@ Template Name: Archives
 */
 get_header();
 ?>
-<main class="bg-white">
+<main class="bg-main">
   <div class="container">
     <section class="row">
       <div class="col-12">

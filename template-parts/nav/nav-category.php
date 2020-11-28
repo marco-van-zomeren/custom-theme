@@ -3,7 +3,7 @@
     <div class="col-12 position-relative z-1">
       <div class="tabs js__tabs">
         <div class="tabs__container">
-          <ul class="tabs tabs__list c:text-black c:hover:text-tertiary text-uppercase">
+          <ul class="tabs tabs__list c:text-gray-500 c:hover:text-tertiary text-uppercase">
           <?php
 		  $blogCategory =  get_theme_mod( 'custom_blog-category');
 			
