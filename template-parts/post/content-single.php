@@ -6,7 +6,7 @@
 <section class="row">
   <aside class="col-3 d-none d-md-block">
     <div class="position-sticky top-20 z-1">
-      <div class="d-block w-1-1 pb-20 pl-md-20 js__share-page"> <a href="" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100 share-page__on-facebook"><i class="fab fa-facebook-f"></i></a> <a href="" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100 share-page__on-linkedin"><i class="fab fa-linkedin-in"></i></a> <a href="" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100 share-page__on-twitter"><i class="fab fa-twitter"></i></a> <a href="whatsapp://send?text=<?php the_title();?> <?php the_permalink();?>" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100" > <i class="fab fa-whatsapp text-black"></i></a> </div>
+      <div class="d-block w-1-1 pb-20 pl-md-20 pl-lg-0 js__share-page"> <a href="" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100 share-page__on-facebook"><i class="fab fa-facebook-f"></i></a> <a href="" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100 share-page__on-linkedin"><i class="fab fa-linkedin-in"></i></a> <a href="" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100 share-page__on-twitter"><i class="fab fa-twitter"></i></a> <a href="whatsapp://send?text=<?php the_title();?> <?php the_permalink();?>" class="d-block w-50 h-50 lh-50 text-center rounded-circle text-black hover:bg-gray-100" > <i class="fab fa-whatsapp text-black"></i></a> </div>
     </div>
   </aside>
   <article id="post-<?php the_ID(); ?>" <?php post_class( "col-12 col-md-6"); ?>>
