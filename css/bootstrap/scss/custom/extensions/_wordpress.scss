@@ -37,7 +37,10 @@ a[aria-current="page"] {
 	}
 	.sub-menu {
 		display: none;
-		background: white;
+        background: var(--main-background-color);
+        @include media-breakpoint-up(lg) {
+		    background: white;
+        }
 		li {
 			margin: 0!important;
 		}

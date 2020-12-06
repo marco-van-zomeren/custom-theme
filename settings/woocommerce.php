@@ -33,12 +33,6 @@ remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_pr
 // Remove tabs
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
-// Reorder order button
-// remove_action( 'woocommerce_single_product_summary', 
-//              'woocommerce_template_single_add_to_cart', 30 );
-//   add_action( 'woocommerce_single_product_summary', 
-//           'woocommerce_template_single_add_to_cart', 9 );
-
 // Hide cart when empty
 add_action( 'wp_footer', function() {    
     if ( WC()->cart->is_empty() ) {

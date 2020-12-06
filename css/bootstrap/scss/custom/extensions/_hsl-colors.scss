@@ -1,0 +1,111 @@
+// HSL COLORS
+$hsl-colors: (
+    "hsl-black"   "hsl(0, 0%" "0%" ")",
+    "hsl-white"   "hsl(0, 0%" "100%" ")",
+    "hsl-blue"    "hsl(216, 98%" "52%" ")",
+    "hsl-indigo"  "hsl(263, 90%" "51%" ")",
+    "hsl-purple"  "hsl(261, 51%" "51%" ")",
+    "hsl-pink"    "hsl(330, 67%" "52%" ")",
+    "hsl-red"     "hsl(354, 70%" "54%" ")",
+    "hsl-orange"  "hsl(27, 98%" "54%" ")",
+    "hsl-yellow"  "hsl(45, 100%" "51%" ")",
+    "hsl-green"   "hsl(134, 61%" "41%" ")",
+    "hsl-teal"    "hsl(162, 73%" "46%" ")",
+    "hsl-cyan"    "hsl(188, 78%" "41%" ")"
+);
+
+@each $name, $hs, $lightness, $end in $hsl-colors {
+  .text-#{$name} {
+    color: #{$hs, var(--text-lightness), var(--text-alpha) $end }!important;
+    --text-lightness: #{$lightness};
+    --text-alpha: 1;
+  }
+ .bg-#{$name} {
+    background-color: #{$hs, var(--background-lightness), var(--background-alpha) $end }!important;
+    --background-lightness: #{$lightness};
+    --background-alpha: 1;
+  }
+  @include media-breakpoint-up(lg) {
+  .bg-lg-#{$name} {
+    background-color: #{$hs, var(--background-lightness), var(--background-alpha) $end }!important;
+    --background-lightness: #{$lightness};
+    --background-alpha: 1;
+    }
+  }
+  .hover\:bg-#{$name}:hover {
+    background-color: #{$hs, var(--background-lightness), var(--background-alpha) $end }!important;
+    --background-lightness: #{$lightness};
+    --background-alpha: 1;
+  }
+  .border-#{$name} {
+    border-color: #{$hs, var(--border-lightness), var(--border-alpha) $end }!important;
+    --border-lightness: #{$lightness};
+    --border-alpha: 1;
+  }
+  .hover\:border-#{$name} {
+    border-color: #{$hs, var(--border-lightness), var(--border-alpha) $end }!important;
+    --border-lightness: #{$lightness};
+    --border-alpha: 1;
+  }
+}
+
+// Text lightness
+$i: 0;
+@while $i < 100 {
+  $i: $i + 10;
+  .text-lightness-#{$i} {
+    --text-lightness: #{$i}%!important;
+  }
+}
+// Text alpha
+$i: 0;
+@while $i < 100 {
+  $i: $i + 10;
+  .text-alpha-#{$i} {
+    --text-alpha: #{$i}%!important;
+  }
+}
+// Background lightness
+$i: 0;
+@while $i < 100 {
+  $i: $i + 5;
+  .bg-lightness-#{$i},
+  .hover\:bg-lightness-#{$i}:hover {
+    --background-lightness: #{$i}%!important;
+  }
+}
+// Background alpha
+$i: 0;
+@while $i < 100 {
+  $i: $i + 10;
+  .bg-alpha-#{$i} {
+    --background-alpha: #{$i}%!important;
+  }
+}
+// Border lightness
+$i: 0;
+@while $i < 100 {
+  $i: $i + 10;
+  .border-lightness-#{$i} {
+    --border-lightness: #{$i}%!important;
+  }
+}
+// Border alpha
+$i: 0;
+@while $i < 100 {
+  $i: $i + 10;
+  .border-alpha-#{$i} {
+    --border-alpha: #{$i}%!important;
+  }
+}
+// Enable transparent
+@include media-breakpoint-up(lg) {
+    *[class*="hsl"][class$="lg-transparent"]{
+        background: transparent!important
+    }
+}
+@include media-breakpoint-up(lg) {
+    *[class^="bg"].bg-lg-transparent{
+        background: transparent!important
+    }
+}

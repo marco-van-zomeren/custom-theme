@@ -149,5 +149,6 @@ require_once( get_template_directory() . '/settings/customize.php' );
 require_once( get_template_directory() . '/settings/comments.php' );
 require_once( get_template_directory() . '/settings/counter.php' );
 require_once( get_template_directory() . '/settings/shortcodes.php' );
+require_once( get_template_directory() . '/settings/webp.php' );
 require_once( get_template_directory() . '/settings/woocommerce.php' );
 

@@ -67,6 +67,19 @@ function custom_customizer( $wp_customize ) {
       )
     )
   );
+  $wp_customize->add_setting( 'custom_font-weight-body' );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      'custom_font-weight-body',
+      array(
+        'label' => __( 'Font weight body', 'custom-theme' ),
+        'section' => 'custom_typography',
+        'settings' => 'custom_font-weight-body',
+        'type' => 'text'
+      )
+    )
+  );
   // Colors
   $wp_customize->add_section( 'custom_colors', array(
     'title' => __( 'Colors', 'custom-theme' ),
@@ -369,6 +382,7 @@ add_action( 'customize_register', 'custom_customizer' );
 function generate_theme_option_css() {
   $fontFamily = get_theme_mod( 'custom_font' );
   $fontBody = get_theme_mod( 'custom_font-body' );
+  $fontWeightBody = get_theme_mod( 'custom_font-weight-body' );
   $fontHeadings = get_theme_mod( 'custom_font-headings' );
   $fontWeightHeadings = get_theme_mod( 'custom_font-weight-headings' );
   $colorBody = get_theme_mod( 'custom_body-color' );
@@ -389,6 +403,8 @@ function generate_theme_option_css() {
 @import url('<?php echo $fontFamily;?>');
 body {
 font-family: <?php echo $fontBody;
+?>;
+font-weight: <?php echo $fontWeightBody;
 ?>
 }
 h1, h2, h3 {
